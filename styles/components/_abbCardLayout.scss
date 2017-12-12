@@ -1,0 +1,7 @@
+.abbCard-column {
+  @include flex-direction(column);
+}
+
+.abbCard-row {
+  @include flex-direction(row);
+}

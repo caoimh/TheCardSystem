@@ -3,38 +3,480 @@
 <!--#include virtual="includes/meta.shtml" -->
 <!--#include virtual="includes/title.shtml" -->
 <link rel="stylesheet" href="styles/main.css">
-<style type="text/css">
-/*-- GRID BACKGROUND --*/
-body {
-  background-color : #f8f8f8;
-  background-image: url("images/8pxx.png")!important;
-  }
-section {
-	padding: 2em;
-}
-
-
-
-
-</style>
-
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Space+Mono" rel="stylesheet">
+<script src="libraries/prism.js"></script>
+<link rel="stylesheet" href="libraries/prism.css">
 <!--#include virtual="includes/headscripts.shtml" -->
 <!--#include virtual="includes/headstop.shtml" -->
 <!--#include virtual="includes/bodystart.shtml" -->
 <!--#include virtual="includes/browsehappy.shtml" -->
 
-<section class="heroBox">
-<header>
-	<h1>Pistrap test page - index</h1>
-	<p>Pitstrap sub header</p>
-	<span class="icon-cog"></span>
-	<span class="icon-arrow-up"></span>
-	<span class="icon-arrow-left"></span>
-</header>
+<section>
+  <h1>ABB Nested Cards</h1>
+  <ul>
+    <li>abbCard-deck</li>
+    <li>abbCard-wrapper</li>
+    <li>abbCard-head</li>
+    <li>abbcard-body-front</li>
+    <li>abbcard-body-back</li>
+    <li>abbCard-core - this is the part that will be interchangeable with other cards and <b>itself</b>. It can be placed inside another abbCard-core-details
+      <br><br>
+      <ul>
+        <li>abbCard-core-displayBox</li>
+        <li>abbCard-core-controls</li>
+        <li>abbCard-core-details</li>
+      </ul>
+    </li>
+    <li>abbCard-foot</li>
+  </ul>
+  <p>
+    NB! Omitting any of the containers shoudl result in the remaining containers to fill the void.
+  </p>
+  <figure>
+    <img src="images/ExplodedView.png" alt="">
+    <figcaption>Exploded view of card with nested card in the <i>.abbCard-core-details</i></figcaption>
+  </figure>
+  <h2>To Do</h2>
+  <ul>
+    <li>layout control classes within parts</li>
+    <li>vertical and horizontal decks</li>
+    <li>two stylesheets - structure & styling</li>
+    <li>responsive breakpoints</li>
+    <li>Explain each and every part and possibilities for them</li>
+  </ul>
 </section>
+<section>
+  <h1>An abbCard</h1>
+
+  <pre>
+    <code class="language-markup">
+        <script type="prism-html-markup">
+    The wrapper that controls the layout of a card or
+    group or cards
+
+          <div className="abbCard-deck">
+
+          </div>
+
+    Put a card wrapper into it:
+
+          <div class="abbCard-deck">
+            <div class="abbCard-wrapper">
+              An empty card wrapper
+            </div>
+          </div>
+
+    Add some containers:
+
+          <div class="abbCard-deck">
+            <div class="abbCard-wrapper">
+              <div class="abbCard-head">A head</div>
+              <div class="abbCard-body-front">A front side*</div>
+              <div class="abbCard-body-back">A back side*</div>
+              <div class="abbCard-foot">A foot</div>
+            </div>
+          </div>
+
+  * The font and back sides are meant to be toggled into view - i.e
+    only one of them visible at a time.
+
+    Add the core container into the body sides (front/back)
+
+        <div class="abbCard-body-front">
+          <div class="abbCard-core"></div>
+        </div>
+
+    Add the core content holders into the core
+
+        <div class="abbCard-body-front">
+          <div class="abbCard-core">
+            <div class="abbCard-core-displayBox">Display box</div>
+            <div class="abbCard-core-controls">Controls</div>
+            <div class="abbCard-core-details">Details</div>
+          </div>
+        </div>
+
+    All together now
+
+      <div class="abbCard-deck">
+        <div class="abbCard-wrapper">
+          <div class="abbCard-head">A head</div>
+          <div class="abbCard-body-front">
+
+          <div class="abbCard-core">
+            <div class="abbCard-core-displayBox">Display box</div>
+            <div class="abbCard-core-controls">Controls</div>
+            <div class="abbCard-core-details">Details</div>
+          </div>
+
+          </div>
+          <div class="abbCard-foot">A foot</div>
+        </div>
+      </div>
+
+        </script>
+    </code>
+</pre>
+<p>NB! It shold be possible to omit one or more of the containers in the core. The remaining containers should stretch to fill the void.</p>
+<p>Let's see how this looks without styling:</p>
+<br>
+<div class="dasher rounded">
+  <div data-card="abbCard-deck">
+    <div data-card="abbCard-wrapper">
+      <div data-card="abbCard-head">A head</div>
+      <div data-card="abbCard-body-front">Body (front / back)
+
+      <div data-card="abbCard-core">Core
+        <div data-card="abbCard-core-displayBox">Display box</div>
+        <div data-card="abbCard-core-controls">Controls</div>
+        <div data-card="abbCard-core-details">Details</div>
+      </div>
+
+      </div>
+      <div data-card="abbCard-foot">A foot</div>
+    </div>
+  </div>
+</div>
+<br><p>
+  And now with a nested core:
+</p>
+<div class="dasher rounded">
+  <div data-card="abbCard-deck">
+    <div data-card="abbCard-wrapper">
+      <div data-card="abbCard-head">A head</div>
+      <div data-card="abbCard-body-front">Body (front / back)
+
+      <div data-card="abbCard-core">Core
+        <div data-card="abbCard-core-displayBox">Display box</div>
+        <div data-card="abbCard-core-controls">Controls</div>
+        <div data-card="abbCard-core-details">Details
+
+          <div class="innerDasher">
+
+            <div data-card="abbCard-core">Core
+              <div data-card="abbCard-core-displayBox">Display box</div>
+              <div data-card="abbCard-core-controls">Controls</div>
+              <div data-card="abbCard-core-details">Details</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <div data-card="abbCard-foot">A foot</div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<p>Let's see how our deck of cards is looking:</p>
+
+
+<div class="abbCard-deck">
+
+    <!-- card 1 -->
+    <div class="abbCard-wrapper">
+      <div class="abbCard-head">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <div class="abbCard-body-front">
+
+      <div class="abbCard-core">
+        <div class="abbCard-core-displayBox">Display box</div>
+        <div class="abbCard-core-controls">Controls</div>
+        <div class="abbCard-core-details">Details
+          <!-- Nested core -->
+          <div class="abbCard-core">
+            <div class="abbCard-core-displayBox">Nested Display box</div>
+            <div class="abbCard-core-controls">Nested Controls</div>
+            <div class="abbCard-core-details">Nested Details</div>
+          </div>
+          <!-- End nested core -->
+        </div>
+      </div>
+
+      </div>
+
+      <div class="abbCard-foot">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+</div>
 
 
 
+
+<div class="abbCard-deck">
+
+  <!-- card 1 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box</div>
+      <div class="abbCard-core-controls">Controls</div>
+      <div class="abbCard-core-details">Details
+        <!-- Nested core -->
+        <div class="abbCard-core">
+          <div class="abbCard-core-displayBox">Nested Display box</div>
+          <div class="abbCard-core-controls">Nested Controls</div>
+          <div class="abbCard-core-details">Nested Details <br>
+          <br>
+          </div>
+        </div>
+        <!-- End nested core -->
+      </div>
+    </div>
+
+    </div>
+
+    <div class="abbCard-foot">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+
+  <!-- card 2 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head"><div>A head</div></div>
+
+    <div class="abbCard-body-front show">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
+        equipment and complete application solutions.
+      </div>
+    </div>
+    </div>
+
+    <div class="abbCard-body-back hide">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-core-details">This is the back side.
+      </div>
+    </div>
+    </div>
+
+
+    <div class="abbCard-foot"><div><button class="toggleSides">Toggle sides</button></div></div>
+  </div>
+
+
+  <!-- card 3 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head"><div>A head</div></div>
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box </div>
+      <div class="abbCard-core-controls">Controls</div>
+      <div class="abbCard-core-details">Details
+      </div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot"><div>A foot</div></div>
+  </div>
+
+</div>
+
+
+<div class="abbCard-deck">
+
+  <!-- card 1 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head">A head</div>
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box</div>
+      <div class="abbCard-core-controls">Controls</div>
+      <div class="abbCard-core-details">Details <br>
+      <br>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot">A foot</div>
+  </div>
+
+  <!-- card 2 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head">A head</div>
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box</div>
+      <div class="abbCard-core-controls">Controls</div>
+      <div class="abbCard-core-details">Details
+
+        <!-- Nested core -->
+        <div class="abbCard-core">
+          <div class="abbCard-core-displayBox">Nested Display box</div>
+          <div class="abbCard-core-controls">Nested Controls</div>
+          <div class="abbCard-core-details">Nested Details <br>
+          <br>
+          </div>
+        </div>
+        <!-- End nested core -->
+
+      </div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot">A foot</div>
+  </div>
+
+</div>
+
+<br>
+<p>
+  Omitting various containers:
+</p>
+<div class="abbCard-deck">
+
+  <!-- card 1 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head">A head</div>
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-controls">Controls</div>
+      <div class="abbCard-core-details">Details <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot">A foot</div>
+  </div>
+
+  <!-- card 2 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head">A head</div>
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box </div>
+      <div class="abbCard-core-details">Details
+      </div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot">A foot</div>
+  </div>
+
+  <!-- card 3 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head">A head</div>
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box </div>
+      <div class="abbCard-core-controls">Controls</div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot">A foot</div>
+  </div>
+
+</div>
+
+
+<div class="notes">
+  <div>No DisplayBox</div>
+  <div>No Controls</div>
+  <div>No Details</div>
+</div>
+
+
+<div class="abbCard-deck">
+
+  <!-- card 1 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head">A head</div>
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-controls">Controls</div>
+      <div class="abbCard-core-details">Details <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      </div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot">A foot</div>
+  </div>
+
+  <!-- card 2 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box </div>
+      <div class="abbCard-core-details">Details
+      </div>
+    </div>
+
+    </div>
+    <div class="abbCard-foot">A foot</div>
+  </div>
+
+  <!-- card 3 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">Display box </div>
+      <div class="abbCard-core-controls">Controls</div>
+    </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+  <div class="notes">
+    <div>No </div>
+    <div>No Head</div>
+    <div>No Head No Details No Foot</div>
+  </div>
+
+
+<!--
+<pre>
+  <code class="language-markup">
+      <script type="prism-html-markup">
+
+      </script>
+  </code>
+</pre>
+-->
+</section>
 <!--#include virtual="includes/basescripts.shtml" -->
 <!--#include virtual="includes/bodystop.shtml" -->
 <!--#include virtual="includes/htmlstop.shtml" -->

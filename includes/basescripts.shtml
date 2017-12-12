@@ -1,15 +1,68 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-e.src='//www.google-analytics.com/analytics.js';
-r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-ga('create','UA-XXXXX-X');ga('send','pageview');
+
+/*
+
+<div class="abbCard-wrapper">
+  <div class="abbCard-head"><div>A head</div></div>
+
+  <div class="abbCard-body-front">
+  <div class="abbCard-core">
+    <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+    <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
+      equipment and complete application solutions.
+    </div>
+  </div>
+  </div>
+
+  <div class="abbCard-body-back">
+  <div class="abbCard-core">
+    <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+    <div class="abbCard-core-details">This is the back side.
+    </div>
+  </div>
+  </div>
+
+
+  <div class="abbCard-foot"><div><button class="toggleSides">Toggle sides</button></div></div>
+</div>
+
+*/
+
+
+var cards = document.querySelectorAll('.abbCard-wrapper');
+
+  cards.forEach(function(card, index){
+    var front = card.querySelector('.abbCard-body-front');
+    var back = card.querySelector('.abbCard-body-back');
+    var togglers = card.querySelectorAll('.toggleSides');
+
+    for(var i = 0; i < togglers.length; i++){
+      var myFront = togglers[i].parentNode.parentNode.parentNode.querySelector('.abbCard-body-front');
+      var myBack = togglers[i].parentNode.parentNode.parentNode.querySelector('.abbCard-body-back');
+      togglers[i].addEventListener('click', function(){
+
+        if (myFront.classList.contains('show')) {
+          myFront.classList.remove('show');
+          myFront.classList.add('hide');
+        } else if (myFront.classList.contains('hide')){
+          myFront.classList.remove('hide');
+          myFront.classList.add('show');
+        }
+
+        if (myBack.classList.contains('show')) {
+          myBack.classList.remove('show');
+          myBack.classList.add('hide');
+        } else if (myBack.classList.contains('hide')){
+          myBack.classList.remove('hide');
+          myBack.classList.add('show');
+        }
+
+      });
+    }
+
+
+
+
+  });
+
 </script>
