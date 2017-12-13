@@ -21,7 +21,7 @@
 }
 
 .abbCard-head *,.abbCard-foot * {
-  @include flex-grow(1);
+  //@include flex-grow(1);
 }
 
 .abbCard-body-front,
@@ -48,5 +48,5 @@
 }
 
 .abbCard-foot {
-  @include justify-content(flex-end);
+  //@include justify-content(flex-end);
 }

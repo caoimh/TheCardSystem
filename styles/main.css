@@ -1155,13 +1155,6 @@ Basic HTML elements
   -moz-align-items: center;
   align-items: center; }
 
-.abbCard-head *, .abbCard-foot * {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -moz-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1; }
-
 .abbCard-body-front,
 .abbCard-body-back {
   display: -webkit-box;
@@ -1203,13 +1196,6 @@ Basic HTML elements
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
 
-.abbCard-foot {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end; }
-
 .abbCard-deck {
   border: dotted 1px #d2d2d2;
   padding: 1em 1em 0em 1em;
@@ -1223,11 +1209,11 @@ Basic HTML elements
   min-height: 100%;
   margin: 0em 1em 1em 0em;
   padding: 0.5em;
-  border-radius: 0.5em;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
+  border-radius: 0.125em;
+  -webkit-border-radius: 0.125em;
+  -moz-border-radius: 0.125em;
+  -ms-border-radius: 0.125em;
+  -o-border-radius: 0.125em;
   -webkit-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25); }
@@ -1236,14 +1222,14 @@ Basic HTML elements
   background-color: #fff; }
 
 .abbCard-head {
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.125em;
+  border-top-right-radius: 0.125em;
   border-bottom: solid 1px #f0f0f0;
   padding-bottom: 0.5em; }
 
 .abbCard-foot {
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.125em;
+  border-bottom-right-radius: 0.125em;
   border-top: solid 1px #f0f0f0;
   padding-top: 0.5em; }
 
@@ -1274,12 +1260,6 @@ Basic HTML elements
 .abbCard-core-details > .abbCard-core {
   border: solid 1px #f0f0f0; }
 
-.show {
-  visibility: visible; }
-
-.hide {
-  visibility: hidden; }
-
 .abbCard-column {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -1295,6 +1275,52 @@ Basic HTML elements
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row; }
+
+.abbLayout-justify-start * {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start; }
+
+.abbLayout-justify-end * {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end; }
+
+.abbLayout-justify-center * {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center; }
+
+.abbLayout-justify-space-between * {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between; }
+
+.abbLayout-justify-space-around * {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  justify-content: space-around; }
+
+.align-text-right,
+.align-text-right * {
+  text-align: right; }
+
+.align-text-left,
+.align-text-left * {
+  text-align: left; }
+
+.align-text-center,
+.align-text-center * {
+  text-align: center; }
 
 /*
 CSS
@@ -1322,20 +1348,31 @@ figure img {
   -moz-border-radius: 0.5em;
   -ms-border-radius: 0.5em;
   -o-border-radius: 0.5em;
-  background-color: #141414;
+  background-color: #323232;
   padding: 1em 0px; }
+
+.figcap {
+  text-align: center;
+  padding-top: 2em;
+  margin: auto;
+  color: #70E7E7;
+  font-family: 'Inconsolata-Regular';
+  text-transform: uppercase; }
 
 .dasher {
   width: 100%; }
   .dasher div {
     border: dotted 1px #0C74DA;
-    padding: 1em;
+    padding: 0.5em;
     margin: 2px;
     color: #abd4fd;
     font-family: 'Inconsolata-Regular';
-    background: rgba(46, 146, 250, 0.25);
+    background: rgba(46, 146, 250, 0.15);
     text-transform: uppercase;
-    margin: 1em; }
+    margin: 1em;
+    -webkit-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25); }
 
 .notes {
   display: -webkit-box;
@@ -1362,7 +1399,7 @@ figure img {
 .innerDasher div {
   border: dotted 1px #70E7E7;
   background-color: rgba(112, 231, 231, 0.35);
-  padding: 1em;
+  padding: 0.5em;
   margin: 2px; }
 
 .innerDasher {
@@ -1376,6 +1413,7 @@ figure img {
   font-size: 1.0em;
   text-transform: uppercase; }
 
+/*-- Txt --*/
 /*-- Images --*/
 img {
   display: block;
@@ -1401,9 +1439,15 @@ pre[class*="language-"] {
   -moz-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25); }
 
-/*-- For the JS --*/
-.abbCard-body-back {
-  display: none; }
+/*-- Head styling --*/
+.abbCard-head div, .abbCard-foot div {
+  background-color: #0C74DA;
+  margin-right: 0.25em;
+  padding: 0.25em;
+  color: #fff; }
+
+.abbCard-head div:last-child, .abbCard-foot div:last-child {
+  margin-right: 0em; }
 
 /*
 Your new CSS - selectors & overrides

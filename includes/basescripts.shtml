@@ -26,6 +26,11 @@
   <div class="abbCard-foot"><div><button class="toggleSides">Toggle sides</button></div></div>
 </div>
 
+var closestFrontside = toggler.parentNode.parentNode.querySelector('.frontside');
+var closestBackside = toggler.parentNode.parentNode.querySelector('.backside');
+closestFrontside.classList.toggle('is-visible');
+closestBackside.classList.toggle('is-visible');
+
 */
 
 
@@ -41,21 +46,9 @@ var cards = document.querySelectorAll('.abbCard-wrapper');
       var myBack = togglers[i].parentNode.parentNode.parentNode.querySelector('.abbCard-body-back');
       togglers[i].addEventListener('click', function(){
 
-        if (myFront.classList.contains('show')) {
-          myFront.classList.remove('show');
-          myFront.classList.add('hide');
-        } else if (myFront.classList.contains('hide')){
-          myFront.classList.remove('hide');
-          myFront.classList.add('show');
-        }
+        //myFront.classList.remove('is-visible');
+        //myBack.classList.remove('is-not-isible');
 
-        if (myBack.classList.contains('show')) {
-          myBack.classList.remove('show');
-          myBack.classList.add('hide');
-        } else if (myBack.classList.contains('hide')){
-          myBack.classList.remove('hide');
-          myBack.classList.add('show');
-        }
 
       });
     }
