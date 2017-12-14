@@ -48,6 +48,8 @@
     <li>two stylesheets - structure & styling</li>
     <li>responsive breakpoints</li>
     <li>Explain each and every part and possibilities for them</li>
+    <li>Display: Grid version</li>
+    <li>min-max width classes for the deck to affect the children</li>
   </ul>
 </section>
 <section>
@@ -179,35 +181,112 @@
     <!-- card 1 -->
     <div class="abbCard-wrapper">
       <div class="abbCard-head">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
       </div>
 
       <div class="abbCard-body-front">
 
       <div class="abbCard-core">
-        <div class="abbCard-core-displayBox">Display box</div>
+        <div class="abbCard-core-displayBox"><img src="images/robot-1.png" alt=""></div>
+        <div class="abbCard-core-details">Front
+        </div>
+      </div>
+
+      </div>
+
+      <div class="abbCard-body-back hidden">
+
+      <div class="abbCard-core">
+        <div class="abbCard-core-displayBox"><img src="images/robot-2.png" alt=""></div>
         <div class="abbCard-core-controls">Controls</div>
-        <div class="abbCard-core-details">Details
-          <!-- Nested core -->
-          <div class="abbCard-core">
-            <div class="abbCard-core-displayBox">Nested Display box</div>
-            <div class="abbCard-core-controls">Nested Controls</div>
-            <div class="abbCard-core-details">Nested Details</div>
-          </div>
-          <!-- End nested core -->
+        <div class="abbCard-core-details">Back
         </div>
       </div>
 
       </div>
 
       <div class="abbCard-foot">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div>item</div>
+        <div><button class="switcher">Switch</button></div>
+        <div>item</div>
       </div>
     </div>
+
+    <!-- card 2 -->
+    <div class="abbCard-wrapper">
+      <div class="abbCard-head">
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+      </div>
+
+      <div class="abbCard-body-front">
+
+      <div class="abbCard-core">
+        <div class="abbCard-core-displayBox"><img src="images/robot-1.png" alt=""></div>
+        <div class="abbCard-core-details">Front
+        </div>
+      </div>
+
+      </div>
+
+      <div class="abbCard-body-back hidden">
+
+      <div class="abbCard-core">
+        <div class="abbCard-core-displayBox"><img src="images/robot-2.png" alt=""></div>
+        <div class="abbCard-core-controls">Controls</div>
+        <div class="abbCard-core-details">Back
+        </div>
+      </div>
+
+      </div>
+
+      <div class="abbCard-foot">
+        <div>item</div>
+        <div><button class="switcher">Switch</button></div>
+        <div>item</div>
+      </div>
+    </div>
+
+
+    <!-- card 3 -->
+    <div class="abbCard-wrapper">
+      <div class="abbCard-head">
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+      </div>
+
+      <div class="abbCard-body-front">
+
+      <div class="abbCard-core">
+        <div class="abbCard-core-displayBox"><img src="images/robot-1.png" alt=""></div>
+        <div class="abbCard-core-details">Front
+        </div>
+      </div>
+
+      </div>
+
+      <div class="abbCard-body-back hidden">
+
+      <div class="abbCard-core">
+        <div class="abbCard-core-displayBox"><img src="images/robot-2.png" alt=""></div>
+        <div class="abbCard-core-controls">Controls</div>
+        <div class="abbCard-core-details">Back
+        </div>
+      </div>
+
+      </div>
+
+      <div class="abbCard-foot">
+        <div>item</div>
+        <div><button class="switcher">Switch</button></div>
+        <div>item</div>
+      </div>
+    </div>
+
 </div>
 
 
@@ -218,7 +297,7 @@
 
   <!-- card 2 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div></div>
+    <div class="abbCard-head"><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
@@ -239,13 +318,13 @@
     </div>
 -->
 
-    <div class="abbCard-foot"><div>1</div><div>2</div></div>
+    <div class="abbCard-foot"><div>item</div><div>item</div></div>
   </div>
 
 
   <!-- card 3 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-head"><div>item</div><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
@@ -266,7 +345,7 @@
   -->
 
 
-    <div class="abbCard-foot"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-foot"><div>item</div><div>item</div><div>item</div></div>
   </div>
 
 </div>
@@ -379,12 +458,6 @@
 </div>
 
 
-<div class="notes">
-  <div>No DisplayBox</div>
-  <div>No Controls</div>
-  <div>No Details</div>
-</div>
-
 
 <div class="abbCard-deck">
 
@@ -436,13 +509,6 @@
 </div>
 
 
-
-  <div class="notes">
-    <div>No </div>
-    <div>No Head</div>
-    <div>No Head No Details No Foot</div>
-  </div>
-
 </section>
 <section>
 <h1>Layout controllers</h1>
@@ -452,192 +518,172 @@
 
   <!-- card 1 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div></div>
+    <div class="abbCard-head"><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
-      </div>
+      <div class="abbCard-controls">Controls</div>
+      <div class="abbCard-core-details">Details</div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div></div>
+    <div class="abbCard-foot"><div>item</div></div>
   </div>
 
   <!-- card 2 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div></div>
+    <div class="abbCard-head"><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
-      </div>
+      <div class="abbCard-controls">Controls</div>
+      <div class="abbCard-core-details">Details</div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div></div>
+    <div class="abbCard-foot"><div>item</div><div>item</div></div>
   </div>
 
 
   <!-- card 3 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-head"><div>item</div><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
       <div class="abbCard-controls"></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
-      </div>
+      <div class="abbCard-controls">Controls</div>
+      <div class="abbCard-core-details">Details</div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-foot"><div>item</div><div>item</div><div>item</div></div>
   </div>
 
 </div>
 
 
-
-<p>Here is a collection of classes which control the horizontal layout of children of abbCard-deck, abbCard-head and abbCard-foot etc.</p>
-<pre>
-
-
-  . {
-    @include justify-content(flex-start);
-  }
-
-  .abbLayout-justify-end {
-    @include justify-content(flex-end);
-  }
-
-  .abbLayout-justify-center {
-    @include justify-content(center);
-  }
-
-  .abbLayout-justify-space-between {
-    @include justify-content(space-between);
-  }
-
-  .abbLayout-justify-space-around {
-    @include justify-content(space-around);
-  }
-
-</pre>
-
-<h5>text aligned left by default - no extra classes needed</h5>
+<h3>abbLayout-justify-start</h3>
+<h5>
+  .abbCard-head > .abbLayout-justify-start
+  <br>
+  .abbCard-foot > .abbLayout-justify-start
+</h5>
+  <br>
 <div class="abbCard-deck">
 
   <!-- card 1 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div></div>
+    <div class="abbCard-head abbLayout-justify-start"><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div></div>
+    <div class="abbCard-foot abbLayout-justify-start"><div>item</div></div>
   </div>
 
   <!-- card 2 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div class="align-text-right"><img src="images/16x16.png" width="16" height="16" alt=""></div></div>
+    <div class="abbCard-head abbLayout-justify-start"><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div></div>
+    <div class="abbCard-foot abbLayout-justify-start"><div>item</div><div>item</div></div>
   </div>
 
 
   <!-- card 3 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head "><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-head abbLayout-justify-start"><div>item</div><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
       <div class="abbCard-controls"></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-foot abbLayout-justify-start"><div>item</div><div>item</div><div>item</div></div>
   </div>
 
 </div>
 
-<h5>align-text-center</h5>
+<h3>abbLayout-justify-center</h3>
+<h5>
+  .abbCard-head > .abbLayout-justify-center
+  <br>
+  .abbCard-foot > .abbLayout-justify-center
+</h5>
 <div class="abbCard-deck">
 
   <!-- card 1 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div></div>
+    <div class="abbCard-head abbLayout-justify-center"><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div></div>
+    <div class="abbCard-foot abbLayout-justify-center"><div>item</div></div>
   </div>
 
   <!-- card 2 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div></div>
+    <div class="abbCard-head abbLayout-justify-center"><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div></div>
+    <div class="abbCard-foot abbLayout-justify-center"><div>item</div><div>item</div></div>
   </div>
 
 
   <!-- card 3 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-head abbLayout-justify-center"><div>item</div><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
       <div class="abbCard-controls"></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-foot abbLayout-justify-center"><div>item</div><div>item</div><div>item</div></div>
   </div>
 
 </div>
 
 
-<h5>align-text-right</h5>
+<h3>abbLayout-justify-end</h3>
+<h5>
+  .abbCard-head > .abbLayout-justify-end
+  <br>
+  .abbCard-foot > .abbLayout-justify-end
+</h5>
 <div class="abbCard-deck">
 
   <!-- card 1 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div></div>
+    <div class="abbCard-head abbLayout-justify-end"><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
@@ -647,39 +693,149 @@
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div></div>
+    <div class="abbCard-foot abbLayout-justify-end"><div>item</div></div>
   </div>
 
   <!-- card 2 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div></div>
+    <div class="abbCard-head abbLayout-justify-end"><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div></div>
+    <div class="abbCard-foot abbLayout-justify-end"><div>item</div><div>item</div></div>
   </div>
 
 
   <!-- card 3 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-head"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-head abbLayout-justify-end"><div>item</div><div>item</div><div>item</div></div>
 
     <div class="abbCard-body-front">
     <div class="abbCard-core">
       <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
       <div class="abbCard-controls"></div>
-      <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-        equipment and complete application solutions.
+      <div class="abbCard-core-details">
       </div>
     </div>
     </div>
-    <div class="abbCard-foot"><div>1</div><div>2</div><div>3</div></div>
+    <div class="abbCard-foot abbLayout-justify-end"><div>item</div><div>item</div><div>item</div></div>
+  </div>
+
+</div>
+
+
+
+<h3>abbLayout-justify-space-between</h3>
+<h5>
+  .abbCard-head > .abbLayout-justify-space-between
+  <br>
+  .abbCard-foot > .abbLayout-justify-space-between
+</h5>
+<div class="abbCard-deck">
+
+  <!-- card 1 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head abbLayout-justify-space-between"><div>item</div></div>
+
+    <div class="abbCard-body-front">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-core-details">
+
+      </div>
+    </div>
+    </div>
+    <div class="abbCard-foot abbLayout-justify-space-between"><div>item</div></div>
+  </div>
+
+  <!-- card 2 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head abbLayout-justify-space-between"><div>item</div><div>item</div></div>
+
+    <div class="abbCard-body-front">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-core-details">
+      </div>
+    </div>
+    </div>
+    <div class="abbCard-foot abbLayout-justify-space-between"><div>item</div><div>item</div></div>
+  </div>
+
+
+  <!-- card 3 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head abbLayout-justify-space-between"><div>item</div><div>item</div><div>item</div></div>
+
+    <div class="abbCard-body-front">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-controls"></div>
+      <div class="abbCard-core-details">
+      </div>
+    </div>
+    </div>
+    <div class="abbCard-foot abbLayout-justify-space-between"><div>item</div><div>item</div><div>item</div></div>
+  </div>
+
+</div>
+
+<h3>abbLayout-justify-space-around</h3>
+<h5>
+  .abbCard-head > .abbLayout-justify-space-around
+  <br>
+  .abbCard-foot > .abbLayout-justify-space-around
+</h5>
+<div class="abbCard-deck">
+
+  <!-- card 1 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head abbLayout-justify-space-around"><div>item</div></div>
+
+    <div class="abbCard-body-front">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-core-details">
+
+      </div>
+    </div>
+    </div>
+    <div class="abbCard-foot abbLayout-justify-space-around"><div>item</div></div>
+  </div>
+
+  <!-- card 2 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head abbLayout-justify-space-around"><div>item</div><div>item</div></div>
+
+    <div class="abbCard-body-front">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-core-details">
+      </div>
+    </div>
+    </div>
+    <div class="abbCard-foot abbLayout-justify-space-around"><div>item</div><div>item</div></div>
+  </div>
+
+
+  <!-- card 3 -->
+  <div class="abbCard-wrapper">
+    <div class="abbCard-head abbLayout-justify-space-around"><div>item</div><div>item</div><div>item</div></div>
+
+    <div class="abbCard-body-front">
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
+      <div class="abbCard-controls"></div>
+      <div class="abbCard-core-details">
+      </div>
+    </div>
+    </div>
+    <div class="abbCard-foot abbLayout-justify-space-around"><div>item</div><div>item</div><div>item</div></div>
   </div>
 
 </div>

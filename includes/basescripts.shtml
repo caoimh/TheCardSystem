@@ -1,61 +1,74 @@
+
 <script>
 
-/*
-
-<div class="abbCard-wrapper">
-  <div class="abbCard-head"><div>A head</div></div>
-
-  <div class="abbCard-body-front">
-  <div class="abbCard-core">
-    <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-    <div class="abbCard-core-details">ABB is a leading supplier of industrial robots and robot software,
-      equipment and complete application solutions.
-    </div>
-  </div>
-  </div>
-
-  <div class="abbCard-body-back">
-  <div class="abbCard-core">
-    <div class="abbCard-core-displayBox"><img src="images/robot.jpeg" alt=""></div>
-    <div class="abbCard-core-details">This is the back side.
-    </div>
-  </div>
-  </div>
-
-
-  <div class="abbCard-foot"><div><button class="toggleSides">Toggle sides</button></div></div>
-</div>
-
-var closestFrontside = toggler.parentNode.parentNode.querySelector('.frontside');
-var closestBackside = toggler.parentNode.parentNode.querySelector('.backside');
-closestFrontside.classList.toggle('is-visible');
-closestBackside.classList.toggle('is-visible');
-
-*/
-
-
-var cards = document.querySelectorAll('.abbCard-wrapper');
+  var cards = document.querySelectorAll('.abbCard-wrapper');
 
   cards.forEach(function(card, index){
     var front = card.querySelector('.abbCard-body-front');
     var back = card.querySelector('.abbCard-body-back');
-    var togglers = card.querySelectorAll('.toggleSides');
+    var switcher = card.querySelectorAll('.switcher');
 
-    for(var i = 0; i < togglers.length; i++){
-      var myFront = togglers[i].parentNode.parentNode.parentNode.querySelector('.abbCard-body-front');
-      var myBack = togglers[i].parentNode.parentNode.parentNode.querySelector('.abbCard-body-back');
-      togglers[i].addEventListener('click', function(){
-
-        //myFront.classList.remove('is-visible');
-        //myBack.classList.remove('is-not-isible');
-
-
+    for(var i = 0; i < switcher.length; i++){
+      switcher[i].addEventListener('click', function(){
+        front.classList.toggle('hidden');
+        back.classList.toggle('hidden');
       });
-    }
-
-
-
+    };
 
   });
+
+
+  //console.log();
+</script>
+
+
+
+<script>
+/*
+
+var timeout;
+var c_width;
+var d_width;
+
+var cardDeck = document.querySelectorAll('.abbCard-deck');
+var c = document.querySelector('.abbCard-wrapper');
+var d = document.querySelector('.abbCard-deck');
+var deckWidth;
+var cardWidth;
+
+
+cardDeck.forEach(function(deck, index){
+  deckWidth = document.createElement('div');
+  cardWidth = document.createElement('div');
+  deck.appendChild(deckWidth);
+  deck.appendChild(cardWidth);
+  deck.classList.add('billy');
+  console.log(deck);
+});
+
+
+window.addEventListener('resize', function(event){
+  console.log('no debounce');
+
+  if(!timeout){
+    timeout = setTimeout(function(){
+
+        timeout = null;
+        console.log('debounced');
+
+        c_width = c.offsetWidth;
+        d_width = d.offsetWidth;
+
+        deckWidth.innerHTML = "Carddeck width = " + d_width;
+        cardWidth.innerHTML = "Card width = " + c_width;
+
+    }, 66);
+
+
+    console.log(c_width, d_width);
+  }
+}, false);
+
+*/
 
 </script>

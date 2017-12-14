@@ -1,6 +1,12 @@
 
 .abbCard-deck {
   @include flexbox;
+
+  //If you want to center the cards in the card deck:
+  /*
+  @include justify-content(center);
+  @include align-items(center);
+  */
 }
 
 .abbCard-deck .abbCard-wrapper:last-child {
@@ -20,9 +26,16 @@
   @include align-items(center);
 }
 
-.abbCard-head *,.abbCard-foot * {
-  //@include flex-grow(1);
+.abbCard-head ,.abbCard-foot  {
+  @include flex-grow(1);
 }
+
+
+/*
+.abbCard-head *,.abbCard-foot * {
+  @include flex-grow(1);
+}
+*/
 
 .abbCard-body-front,
 .abbCard-body-back {

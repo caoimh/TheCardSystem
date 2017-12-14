@@ -6,25 +6,24 @@
   @include flex-direction(row);
 }
 
-.abbLayout-justify-start *{
+.abbLayout-justify-start {
   @include justify-content(flex-start);
 }
 
-.abbLayout-justify-end *{
-
+.abbLayout-justify-end {
   @include justify-content(flex-end);
 }
 
-.abbLayout-justify-center *{
+.abbLayout-justify-center {
 
   @include justify-content(center);
 }
 
-.abbLayout-justify-space-between *{
+.abbLayout-justify-space-between {
   @include justify-content(space-between);
 }
 
-.abbLayout-justify-space-around *{
+.abbLayout-justify-space-around {
   @include justify-content(space-around);
 }
 

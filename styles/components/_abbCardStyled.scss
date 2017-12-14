@@ -3,10 +3,12 @@
   border: dotted 1px #d2d2d2;
   padding: 1em 1em 0em 1em;
   margin-bottom: 1em;
+  background-color: rgba(255,255,255,0.35);
 }
 
 .abbCard-deck .abbCard-wrapper:last-child {
-  margin-right: 0; }
+  margin-right: 0;
+}
 
 .abbCard-wrapper {
   background-color: #fff;
