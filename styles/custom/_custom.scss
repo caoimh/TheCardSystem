@@ -130,6 +130,10 @@ pre[class*="language-"] {
 /*-- For the JS --*/
 
 .hidden {
+  /*
   visibility: hidden;
   height: 0;
+  */
+
+  display: none;
 }

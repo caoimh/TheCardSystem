@@ -1213,17 +1213,14 @@ Basic HTML elements
 
 .abbCard-deck {
   border: dotted 1px #d2d2d2;
-  padding: 1em 1em 0em 1em;
+  padding: 1em 0.5em 0em 0.5em;
   margin-bottom: 1em;
   background-color: rgba(255, 255, 255, 0.35); }
-
-.abbCard-deck .abbCard-wrapper:last-child {
-  margin-right: 0; }
 
 .abbCard-wrapper {
   background-color: #fff;
   min-height: 100%;
-  margin: 0em 1em 1em 0em;
+  margin: 0em 0.5em 1em 0.5em;
   padding: 0.5em;
   border-radius: 0.125em;
   -webkit-border-radius: 0.125em;
@@ -1347,6 +1344,18 @@ Basic HTML elements
 .abbCard-wrapper {
   min-width: 320px;
   max-width: 33.3333%; }
+
+.abbCard-deck.min-max-280-540 .abbCard-wrapper {
+  min-width: 280px;
+  max-width: 540px; }
+
+.abbCard-deck.min-max-280-100pc .abbCard-wrapper {
+  min-width: 280px;
+  max-width: 100%; }
+
+.abbCard-deck.min-max-320-50pc .abbCard-wrapper {
+  min-width: 320px;
+  max-width: 50%; }
 
 /*
 .abbCard-wrapper {
@@ -1496,8 +1505,11 @@ pre[class*="language-"] {
 
 /*-- For the JS --*/
 .hidden {
+  /*
   visibility: hidden;
-  height: 0; }
+  height: 0;
+  */
+  display: none; }
 
 /*
 Your new CSS - selectors & overrides

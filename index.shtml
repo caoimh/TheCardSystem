@@ -290,7 +290,7 @@
 </div>
 
 
-<div class="abbCard-deck">
+<div class="abbCard-deck min-max-280-540">
 
   <!-- card 1 -->
 
@@ -349,9 +349,9 @@
   </div>
 
 </div>
+<p>(min-max-280-540)</p>
 
-
-<div class="abbCard-deck">
+<div class="abbCard-deck min-max-320-50pc">
 
   <!-- card 1 -->
   <div class="abbCard-wrapper">
@@ -400,7 +400,7 @@
   </div>
 
 </div>
-
+<p>min-max-320-50pc</p>
 <br>
 <p>
   Omitting various containers:
