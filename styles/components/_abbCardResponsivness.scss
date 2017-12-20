@@ -26,6 +26,10 @@
   max-width: 50%;
 }
 
+@media (max-width: 722px) {
+  min-width: 100%;
+}
+
 /*
 .abbCard-wrapper {
   max-width: 480px;

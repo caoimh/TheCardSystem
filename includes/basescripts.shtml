@@ -24,27 +24,22 @@
 
 
 <script>
-/*
+
 
 var timeout;
-var c_width;
 var d_width;
 
-var cardDeck = document.querySelectorAll('.abbCard-deck');
-var c = document.querySelector('.abbCard-wrapper');
 var d = document.querySelector('.abbCard-deck');
+var showWidth = document.querySelector('.showWidth');
 var deckWidth;
 var cardWidth;
 
 
-cardDeck.forEach(function(deck, index){
+
   deckWidth = document.createElement('div');
-  cardWidth = document.createElement('div');
-  deck.appendChild(deckWidth);
-  deck.appendChild(cardWidth);
-  deck.classList.add('billy');
-  console.log(deck);
-});
+  showWidth.appendChild(deckWidth);
+  console.log(showWidth);
+
 
 
 window.addEventListener('resize', function(event){
@@ -56,19 +51,17 @@ window.addEventListener('resize', function(event){
         timeout = null;
         console.log('debounced');
 
-        c_width = c.offsetWidth;
         d_width = d.offsetWidth;
 
         deckWidth.innerHTML = "Carddeck width = " + d_width;
-        cardWidth.innerHTML = "Card width = " + c_width;
 
     }, 66);
 
 
-    console.log(c_width, d_width);
+    console.log(d_width);
   }
 }, false);
 
-*/
+
 
 </script>
