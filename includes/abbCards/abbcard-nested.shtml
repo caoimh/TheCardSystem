@@ -1,0 +1,43 @@
+<div class="abbCard-wrapper">
+  <div class="abbCard-head">
+    <div>item</div>
+    <div>item</div>
+    <div>item</div>
+  </div>
+
+  <div class="abbCard-body-front">
+
+  <div class="abbCard-core">
+    <div class="abbCard-core-displayBox"><img src="images/robot-1.png" alt=""></div>
+    <div class="abbCard-core-details">Front
+    </div>
+  </div>
+
+  </div>
+
+  <div class="abbCard-body-back hidden">
+
+  <div class="abbCard-core">
+    <div class="abbCard-core-displayBox"><img src="images/robot-2.png" alt=""></div>
+    <div class="abbCard-core-controls"><button>Tab A</button><button>Tab B</button><button>Tab C</button></div>
+    <div class="abbCard-core-details">
+      <!-- Nested core -->
+      <div class="abbCard-core">
+        <!--<div class="abbCard-core-displayBox">Nested Display box</div>-->
+        <div class="abbCard-core-controls"><button>Tab 1</button><button>Tab 2</button><button>Tab 3</button></div>
+        <div class="abbCard-core-details">Nested Details for Tab A - Tab 1<br>
+        <br>
+        </div>
+      </div>
+      <!-- End nested core -->
+    </div>
+  </div>
+
+  </div>
+
+  <div class="abbCard-foot">
+    <div>item</div>
+    <div><button class="switcher">Switch</button></div>
+    <div>item</div>
+  </div>
+</div>

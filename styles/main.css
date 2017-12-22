@@ -1212,10 +1212,10 @@ Basic HTML elements
   flex: 1 0 auto; }
 
 .abbCard-deck {
-  border: dotted 1px #d2d2d2;
   padding: 1em 0.5em 0em 0.5em;
   margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.35); }
+  background-color: rgba(33, 37, 43, 0.75);
+  border: dotted 1px #363c46; }
 
 .abbCard-wrapper {
   background-color: #fff;
@@ -1233,6 +1233,16 @@ Basic HTML elements
 
 .abbCard-head, .abbCard-foot {
   background-color: #fff; }
+
+/*-- Head + Foot children styling --*/
+.abbCard-head div, .abbCard-foot div {
+  background-color: #fff;
+  margin-right: 0.25em;
+  padding: 0.25em;
+  color: #9DA5B5; }
+
+.abbCard-head div:last-child, .abbCard-foot div:last-child {
+  margin-right: 0em; }
 
 .abbCard-head {
   border-top-left-radius: 0.125em;
@@ -1253,14 +1263,20 @@ Basic HTML elements
 
 .abbCard-core .abbCard-core-displayBox {
   background-color: #fafafa;
-  border-bottom: solid 1px #f0f0f0; }
+  border-bottom: solid 1px #f0f0f0;
+  /*
+  max-height: 20em;
+  overflow: hidden;
+  */ }
 
 .abbCard-core .abbCard-core-controls {
   background-color: #fafafa;
-  border-bottom: solid 1px #f0f0f0; }
+  border-bottom: solid 1px #f0f0f0;
+  text-align: center; }
 
 .abbCard-core .abbCard-core-details {
   background-color: #fafafa;
+  text-align: center;
   padding: 0.5em;
   text-transform: none !important;
   line-height: 1.5em;
@@ -1335,55 +1351,6 @@ Basic HTML elements
 .align-text-center * {
   text-align: center; }
 
-.abbCard-deck {
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-
-.abbCard-wrapper {
-  min-width: 320px;
-  max-width: 33.3333%; }
-
-.abbCard-deck.min-max-280-540 .abbCard-wrapper {
-  min-width: 280px;
-  max-width: 540px; }
-
-.abbCard-deck.min-max-280-100pc .abbCard-wrapper {
-  min-width: 280px;
-  max-width: 100%; }
-
-.abbCard-deck.min-max-320-50pc .abbCard-wrapper {
-  min-width: 320px;
-  max-width: 50%; }
-
-@media (max-width: 722px) {
-  min-width: 100%; }
-/*
-.abbCard-wrapper {
-  max-width: 480px;
-  min-width: 280px;
-}
-
-
-@media (min-width: 900px) {
-  .abbCard-wrapper {
-    min-width: 400px;
-    max-width: 500px;
-  }
-}
-
-@media (min-width: 800px) {
-  .abbCard-wrapper {
-    min-width: 280px;
-    max-width: 480px;
-  }
-
-  .abbCard-deck {
-    @include flex-wrap(no-wrap);
-  }
-}
-*/
 /*
 CSS
 */
@@ -1391,13 +1358,19 @@ CSS
 CSS from plugins etc
 */
 /*-- Global --*/
+* {
+  font-family: 'Inconsolata-Regular'; }
+
 body, html {
-  background-color: #f0f0f0; }
+  background-color: #282C34;
+  background-image: url("../images/bg-16px-grey.png");
+  background-repeat: repeat; }
 
 /*-- Setup your structure here --*/
 section {
   max-width: 80em;
-  margin: auto; }
+  margin: auto;
+  color: #9DA5B5; }
 
 figure img {
   margin: auto;
@@ -1409,26 +1382,26 @@ figure img {
   -moz-border-radius: 0.5em;
   -ms-border-radius: 0.5em;
   -o-border-radius: 0.5em;
-  background-color: #323232;
+  background-color: rgba(33, 37, 43, 0.75);
   padding: 1em 0px; }
 
 .figcap {
   text-align: center;
   padding-top: 2em;
   margin: auto;
-  color: #70E7E7;
+  color: #02DED5;
   font-family: 'Inconsolata-Regular';
   text-transform: uppercase; }
 
 .dasher {
   width: 100%; }
   .dasher div {
-    border: dotted 1px #0C74DA;
+    border: dotted 1px #00A9FF;
     padding: 0.5em;
     margin: 2px;
     color: #abd4fd;
     font-family: 'Inconsolata-Regular';
-    background: rgba(46, 146, 250, 0.15);
+    background: rgba(0, 169, 255, 0.15);
     text-transform: uppercase;
     margin: 1em;
     -webkit-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
@@ -1443,8 +1416,8 @@ figure img {
     font-size: 1em; }
 
 .innerDasher div {
-  border: dotted 1px #70E7E7;
-  background-color: rgba(112, 231, 231, 0.35);
+  border: dotted 1px #02DED5;
+  background-color: rgba(2, 222, 213, 0.35);
   padding: 0.5em;
   margin: 2px; }
 
@@ -1463,10 +1436,26 @@ figure img {
   text-transform: uppercase; }
 
 /*-- Txt --*/
+h4, h5 {
+  color: #DAE1EE;
+  font-weight: normal; }
+
+h1 {
+  color: #8BFFB2;
+  font-weight: normal; }
+
+h2 {
+  color: #02DED5;
+  font-weight: normal; }
+
+h3 {
+  color: #D3FFCC;
+  font-weight: normal; }
+
 p {
-  font-size: 1.5em;
-  color: #323232;
-  padding-top: 1.5em; }
+  font-size: 1.0em;
+  padding-top: 1.5em;
+  margin: 2em; }
 
 /*-- Images --*/
 img {
@@ -1475,10 +1464,18 @@ img {
 
 /*-- Buttons --*/
 button {
-  padding: 0.5em;
-  background-color: #fff;
-  color: #abd4fd;
+  padding: 0.25em;
+  background-color: #21252B;
+  color: #00A9FF;
   border: solid 1px #f0f0f0; }
+
+button:hover {
+  background-color: #1B1D23;
+  color: #02DED5; }
+
+/*-- Image styling --*/
+img {
+  filter: grayscale(100%); }
 
 /*-- Prism styling --*/
 :not(pre) > code[class*="language-"],
@@ -1493,17 +1490,9 @@ pre[class*="language-"] {
   -moz-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25); }
 
-/*-- Head styling --*/
-.abbCard-head div, .abbCard-foot div {
-  background-color: #fff;
-  margin-right: 0.25em;
-  padding: 0.25em;
-  color: #70E7E7;
-  border: dotted 1px #70E7E7; }
-
-.abbCard-head div:last-child, .abbCard-foot div:last-child {
-  margin-right: 0em; }
-
+/*
+Your new CSS - selectors & overrides
+*/
 /*-- For the JS --*/
 .hidden {
   display: none; }
@@ -1511,13 +1500,13 @@ pre[class*="language-"] {
 .billy {
   position: fixed;
   top: 0;
-  background-color: #000;
+  background-color: #21252B;
   padding: 1em;
-  color: yellow;
+  color: #02DED5;
   z-index: 2000; }
 
 /*
-Your new CSS - selectors & overrides
+Classes used by javascripts
 */
 
 /*# sourceMappingURL=main.css.map */

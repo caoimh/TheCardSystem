@@ -8,10 +8,10 @@ http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascr
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: black;
+	color: #6A717D;
 	background: none;
-	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-shadow: 0 1px #1B1D23;
+	font-family: 'Inconsolata-Regular';
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -32,13 +32,15 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
-	background: #b3d4fc;
+	background: #21252B;
+
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-	background: #b3d4fc;
+	background: #21252B;
+
 }
 
 @media print {
@@ -57,7 +59,9 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #fafafa;
+	background: #21252B;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 /* Inline code */
@@ -65,17 +69,23 @@ pre[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: slategray;
+	color: #6A717D;
+	font-family: 'Inconsolata-Regular';
+	
 }
 
 .token.punctuation {
-	color: #999;
+	color: #6A717D;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .namespace {
@@ -89,7 +99,9 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #2D92FA;
+	color: #00A9FF;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .token.selector,
@@ -98,7 +110,9 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #0A73DA;
+	color: #02DED5;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .token.operator,
@@ -106,24 +120,32 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	color: #004C97;
+	color: #ffcc00;
 	background: hsla(0, 0%, 100%, .5);
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: #07a;
+	color: #8BFFB2;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .token.function {
-	color: #DD4A68;
+	color: #ffcc00;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-	color: #e90;
+	color: #ffcc00;
+	font-family: 'Inconsolata-Regular';
+
 }
 
 .token.important,

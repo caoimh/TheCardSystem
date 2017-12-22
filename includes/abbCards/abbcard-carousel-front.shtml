@@ -1,0 +1,21 @@
+<div class="abbCard-wrapper">
+  <div class="abbCard-head"><div>item</div><div>item</div></div>
+
+  <div class="abbCard-body-front">
+  <div class="abbCard-core">
+    <div class="abbCard-core-displayBox">
+      <div class="carousel" data-flickity='{ "resize": true }'>
+        <div class="carousel-cell"><img src="images/robot-1.png" alt=""></div>
+        <div class="carousel-cell"><img src="images/robot-2.png" alt=""></div>
+        <div class="carousel-cell"><img src="images/robot-1.png" alt=""></div>
+        <div class="carousel-cell"><img src="images/robot-2.png" alt=""></div>
+        <div class="carousel-cell"><img src="images/robot-1.png" alt=""></div>
+      </div>
+    </div>
+    <div class="abbCard-core-details">Carousel - Flickity
+    </div>
+  </div>
+  </div>
+
+  <div class="abbCard-foot"><div>item</div><div>item</div></div>
+</div>

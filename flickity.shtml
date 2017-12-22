@@ -1,0 +1,55 @@
+<!--#include virtual="includes/htmlstart.shtml" -->
+<!--#include virtual="includes/headstart.shtml" -->
+<!--#include virtual="includes/meta.shtml" -->
+<!--#include virtual="includes/title.shtml" -->
+<link rel="stylesheet" href="styles/main.css">
+
+<script src="libraries/prism.js"></script>
+<link rel="stylesheet" href="libraries/prism.css">
+
+<!--<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>-->
+<script src="libraries/flickity.js"></script>
+
+<link rel="stylesheet" href="libraries/flickity.css">
+
+<style media="screen">
+.carousel {
+  max-width: 100%; /* fixed gallery width */
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+}
+</style>
+<!--#include virtual="includes/headscripts.shtml" -->
+<!--#include virtual="includes/headstop.shtml" -->
+<!--#include virtual="includes/bodystart.shtml" -->
+<!--#include virtual="includes/browsehappy.shtml" -->
+<div class="billy showWidth"></div>
+<!-- Flickity carousel -->
+
+
+
+
+<div class="abbCard-deck">
+  <div class="abbCard-wrapper">
+    <div class="carousel" data-flickity='{ "resize": true }'>
+      <div class="carousel-cell"><img src="images/robot-1.png" alt=""></div>
+      <div class="carousel-cell"><img src="images/robot-2.png" alt=""></div>
+      <div class="carousel-cell"><img src="images/robot-1.png" alt=""></div>
+      <div class="carousel-cell"><img src="images/robot-2.png" alt=""></div>
+      <div class="carousel-cell"><img src="images/robot-1.png" alt=""></div>
+    </div>
+  </div>
+</div>
+<!-- End Flickity carousel -->
+
+<!--#include virtual="includes/basescripts.shtml" -->
+<!--#include virtual="includes/bodystop.shtml" -->
+<!--#include virtual="includes/htmlstop.shtml" -->
