@@ -591,16 +591,16 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 3em;
-  line-height: 1.0em; }
+  line-height: 3em; }
 
 h2 {
   font-size: 2.0em;
-  line-height: 1.0em; }
+  line-height: 2em; }
 
 h3 {
   font-size: 2.0em;
   font-weight: normal;
-  line-height: 1.0em; }
+  line-height: 1em; }
 
 h4 {
   font-size: 1.0em;
@@ -613,7 +613,8 @@ h5 {
 
 p {
   margin: 0px 0px 2em 0px;
-  max-width: 40em; }
+  max-width: 40em;
+  line-height: 1em; }
 
 header {
   margin-bottom: 1em;
@@ -1214,8 +1215,8 @@ Basic HTML elements
 .abbCard-deck {
   padding: 1em 0.5em 0em 0.5em;
   margin-bottom: 1em;
-  background-color: rgba(33, 37, 43, 0.75);
-  border: dotted 1px #363c46; }
+  background-image: url("../images/pink-hatch.png");
+  background-repeat: repeat; }
 
 .abbCard-wrapper {
   background-color: #fff;
@@ -1227,9 +1228,9 @@ Basic HTML elements
   -moz-border-radius: 0.125em;
   -ms-border-radius: 0.125em;
   -o-border-radius: 0.125em;
-  -webkit-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25); }
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25); }
 
 .abbCard-head, .abbCard-foot {
   background-color: #fff; }
@@ -1351,26 +1352,109 @@ Basic HTML elements
 .align-text-center * {
   text-align: center; }
 
+.abbCard-deck {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.min-320 .abbCard-wrapper {
+  min-width: 320px; }
+
+.stack {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.no-wrap {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  flex-wrap: nowrap; }
+
+.min-max-280-540 .abbCard-wrapper {
+  min-width: 480px;
+  max-width: 540px; }
+
+.abbCard-deck.min-max-280-100pc .abbCard-wrapper {
+  min-width: 280px;
+  max-width: 100%; }
+
+.abbCard-deck.min-max-320-50pc .abbCard-wrapper {
+  min-width: 320px;
+  max-width: 50%; }
+
+@media (max-width: 722px) {
+  min-width: 100%; }
+/*
+.abbCard-wrapper {
+  max-width: 480px;
+  min-width: 280px;
+}
+
+
+@media (min-width: 900px) {
+  .abbCard-wrapper {
+    min-width: 400px;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 800px) {
+  .abbCard-wrapper {
+    min-width: 280px;
+    max-width: 480px;
+  }
+
+  .abbCard-deck {
+    @include flex-wrap(no-wrap);
+  }
+}
+*/
 /*
 CSS
 */
+/**
+ * Tab content
+ */
+.js-tabby .tabs-pane {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .js-tabby .tabs-pane.active {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+  .js-tabby .tabs-pane:focus {
+    outline: none; }
+
 /*
 CSS from plugins etc
 */
 /*-- Global --*/
 * {
-  font-family: 'Inconsolata-Regular'; }
+  font-family: 'ABBvoice'; }
 
 body, html {
-  background-color: #282C34;
+  background-color: #fff;
   background-image: url("../images/bg-16px-grey.png");
   background-repeat: repeat; }
 
 /*-- Setup your structure here --*/
 section {
   max-width: 80em;
-  margin: auto;
-  color: #9DA5B5; }
+  margin: auto; }
 
 figure img {
   margin: auto;
@@ -1382,12 +1466,11 @@ figure img {
   -moz-border-radius: 0.5em;
   -ms-border-radius: 0.5em;
   -o-border-radius: 0.5em;
-  background-color: rgba(33, 37, 43, 0.75);
   padding: 1em 0px; }
 
 .figcap {
   text-align: center;
-  padding-top: 2em;
+  padding-top: 0em;
   margin: auto;
   color: #02DED5;
   font-family: 'Inconsolata-Regular';
@@ -1396,17 +1479,14 @@ figure img {
 .dasher {
   width: 100%; }
   .dasher div {
-    border: dotted 1px #00A9FF;
+    border: none;
     padding: 0.5em;
     margin: 2px;
-    color: #abd4fd;
+    color: #000;
     font-family: 'Inconsolata-Regular';
-    background: rgba(0, 169, 255, 0.15);
+    background: rgba(0, 0, 0, 0.175);
     text-transform: uppercase;
     margin: 1em;
-    -webkit-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.25);
     border-radius: 0.25em;
     -webkit-border-radius: 0.25em;
     -moz-border-radius: 0.25em;
@@ -1416,10 +1496,13 @@ figure img {
     font-size: 1em; }
 
 .innerDasher div {
-  border: dotted 1px #02DED5;
-  background-color: rgba(2, 222, 213, 0.35);
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
   padding: 0.5em;
   margin: 2px; }
+  .innerDasher div div {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.25); }
 
 .innerDasher {
   padding: 0 !important;
@@ -1428,7 +1511,11 @@ figure img {
   background: transparent !important; }
 
 .abbCard-deck {
-  margin-bottom: 8em; }
+  margin-bottom: 8em;
+  border: dotted 1px rgba(0, 0, 0, 0.15); }
+
+.abbCard-wrapper {
+  border: solid 1px rgba(0, 0, 0, 0.05); }
 
 .abbCard-wrapper * {
   font-family: 'Inconsolata-Regular';
@@ -1437,25 +1524,26 @@ figure img {
 
 /*-- Txt --*/
 h4, h5 {
-  color: #DAE1EE;
   font-weight: normal; }
 
 h1 {
-  color: #8BFFB2;
-  font-weight: normal; }
+  font-weight: bold;
+  background-color: rgba(0, 100, 200, 0); }
 
 h2 {
-  color: #02DED5;
-  font-weight: normal; }
+  font-weight: bold;
+  background-color: rgba(0, 100, 200, 0); }
 
 h3 {
-  color: #D3FFCC;
-  font-weight: normal; }
+  font-weight: bold; }
 
 p {
   font-size: 1.0em;
-  padding-top: 1.5em;
-  margin: 2em; }
+  margin: 2em 1em;
+  background-color: rgba(0, 100, 200, 0); }
+
+p, li {
+  line-height: 1.5em; }
 
 /*-- Images --*/
 img {
@@ -1465,9 +1553,10 @@ img {
 /*-- Buttons --*/
 button {
   padding: 0.25em;
-  background-color: #21252B;
+  background: transparent;
   color: #00A9FF;
-  border: solid 1px #f0f0f0; }
+  border: solid 1px #f0f0f0;
+  margin: 0.25em; }
 
 button:hover {
   background-color: #1B1D23;

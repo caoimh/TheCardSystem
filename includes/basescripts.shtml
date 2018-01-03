@@ -1,5 +1,9 @@
 
 <script>
+  tabby.init();
+</script>
+
+<script>
 
   var cards = document.querySelectorAll('.abbCard-wrapper');
 

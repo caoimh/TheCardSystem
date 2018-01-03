@@ -1,9 +1,9 @@
 /*-- Global --*/
 * {
-  font-family: 'Inconsolata-Regular';
+  font-family: 'ABBvoice';
 }
 body, html {
-  background-color: #282C34;
+  background-color: #fff;
   background-image: url("../images/bg-16px-grey.png");
   background-repeat: repeat;
 }
@@ -13,7 +13,6 @@ body, html {
 section {
   max-width: 80em;
   margin: auto;
-  color: #9DA5B5;
 }
 
 figure img {
@@ -24,13 +23,13 @@ figure img {
 // For the demo page only:
 .rounded {
   @include border-radius(0.5em);
-  background-color: rgba(33,37,43,0.75);
-  padding: 1em 0px;
+  //background-color: rgba(33,37,43,0.75);
+  padding: 1em 0px
 }
 
 .figcap {
   text-align: center;
-  padding-top: 2em;
+  padding-top: 0em;
   margin: auto;
   color: #02DED5;
   font-family: 'Inconsolata-Regular';
@@ -40,15 +39,15 @@ figure img {
   width: 100%;
 
   div {
-    border: dotted 1px #00A9FF;
+    border: none;
     padding: 0.5em;
     margin: 2px;
-    color: #abd4fd;
+    color: #000;
     font-family: 'Inconsolata-Regular';
-    background: rgba(0,169,255,0.15);
+    background: rgba(0,0,0,0.175);
     text-transform: uppercase;
     margin: 1em;
-    @include box-shadow(0px,2px,4px,0, rgba(0,0,0,0.25), false);
+    //@include box-shadow(0px,2px,4px,0, rgba(0,0,0,0.25), false);
     @include border-radius(0.25em);
     }
 
@@ -61,10 +60,15 @@ figure img {
 .innerDasher {
 
   div {
-    border: dotted 1px #02DED5;
-    background-color: rgba(2,222,213,0.35);
+    border: none;
+    background-color: rgba(255,255,255,0.25);
     padding: 0.5em;
     margin: 2px;
+
+    div {
+      border: none;
+      background-color: rgba(255,255,255,0.25);
+    }
   }
 }
 
@@ -77,6 +81,11 @@ figure img {
 
 .abbCard-deck {
   margin-bottom: 8em;
+  border: dotted 1px rgba(0,0,0,0.15);
+}
+
+.abbCard-wrapper {
+  border: solid 1px rgba(0,0,0,0.05);
 }
 
 .abbCard-wrapper * {
@@ -87,27 +96,29 @@ figure img {
 
 /*-- Txt --*/
 h4,h5 {
-  color: #DAE1EE;
   font-weight: normal;
 }
 
 h1 {
-  color: #8BFFB2;
-  font-weight: normal;
+  font-weight: bold;
+  background-color: rgba(0,100,200,0.0);
 }
 h2 {
-  color: #02DED5;
-  font-weight: normal;
+  font-weight: bold;
+  background-color: rgba(0,100,200,0.0);
 }
 h3 {
-  color: #D3FFCC;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 p {
   font-size: 1.0em;
-  padding-top: 1.5em;
-  margin: 2em;
+  margin: 2em 1em;
+  background-color: rgba(0,100,200,0.0);
+}
+
+p, li {
+  line-height: 1.5em;
 }
 
 /*-- Images --*/

@@ -10,9 +10,20 @@
   //max-width: 33.3333%;
 }
 
+.min-320 .abbCard-wrapper {
+  min-width: 320px;
+}
 
-.abbCard-deck.min-max-280-540 .abbCard-wrapper {
-  min-width: 280px;
+.stack {
+  @include flex-direction(column);
+}
+
+.no-wrap {
+  @include flex-wrap(nowrap);
+}
+
+.min-max-280-540 .abbCard-wrapper {
+  min-width: 480px;
   max-width: 540px;
 }
 

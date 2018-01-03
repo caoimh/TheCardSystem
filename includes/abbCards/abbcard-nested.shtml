@@ -24,8 +24,8 @@
       <!-- Nested core -->
       <div class="abbCard-core">
         <!--<div class="abbCard-core-displayBox">Nested Display box</div>-->
-        <div class="abbCard-core-controls"><button>Tab 1</button><button>Tab 2</button><button>Tab 3</button></div>
-        <div class="abbCard-core-details">Nested Details for Tab A - Tab 1<br>
+        <div class="abbCard-core-controls"><button>Tab A 1</button><button>Tab A 2</button><button>Tab A 3</button></div>
+        <div class="abbCard-core-details">Nested Details for Tab A > Tab A 1<br>
         <br>
         </div>
       </div>

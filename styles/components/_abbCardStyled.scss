@@ -3,8 +3,10 @@
   padding: 1em 0.5em 0em 0.5em;
   margin-bottom: 1em;
   //@include border-radius(0.5em);
-  background-color: rgba(33,37,43,0.75);
-  border: dotted 1px rgba(54,60,70,1);
+  //background-color: rgba(33,37,43,0.75);
+  //border: dotted 1px rgba(54,60,70,1);
+  background-image: url('../images/pink-hatch.png');
+  background-repeat: repeat;
 }
 
 .abbCard-deck .abbCard-wrapper:last-child {
@@ -17,7 +19,7 @@
   margin: 0em 0.5em 1em 0.5em;
   padding: 0.5em;
   @include border-radius(0.125em);
-  @include box-shadow(0px,2px,4px,0, rgba(0,0,0,0.25), false);
+  @include box-shadow(0px,2px,4px,0px, rgba(0,0,0,0.25), false);
 }
 
 .abbCard-head,.abbCard-foot  {
