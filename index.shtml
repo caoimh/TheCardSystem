@@ -282,11 +282,28 @@
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 </div>
 
-<p>
-  Omitting various containers:
-</p>
-<div class="abbCard-deck">
+<header>
+  <h1>
+    Omitting various containers:
+  </h1>
+  <p>
+    Within the card wrapper containers may be omitted without breaking the cards structure.
+  </p>
+</header>
 
+
+<div class="cardDescriptions">
+  <div>
+    <h4>No Display box</h4>
+  </div>
+  <div>
+    <h4>No Controls</h4>
+  </div>
+  <div>
+    <h4>No Details</h4>
+  </div>
+</div>
+<div class="abbCard-deck">
   <!-- card 1 -->
   <div class="abbCard-wrapper">
     <div class="abbCard-head">A head</div>
@@ -334,56 +351,40 @@
     </div>
     <div class="abbCard-foot">A foot</div>
   </div>
-
 </div>
 
 
-
+<div class="cardDescriptions">
+  <div>
+    <h4>No Core</h4>
+  </div>
+  <div>
+    <h4>No Body</h4>
+  </div>
+  <div>
+    <h4>No head, No Body, No Foot</h4>
+  </div>
+</div>
 <div class="abbCard-deck">
 
   <!-- card 1 -->
   <div class="abbCard-wrapper">
     <div class="abbCard-head">A head</div>
-    <div class="abbCard-body-front">
-
-    <div class="abbCard-core">
-      <div class="abbCard-core-controls">Controls</div>
-      <div class="abbCard-core-details">Details <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      </div>
-    </div>
-
-    </div>
+    <div class="abbCard-body-front"></div>
     <div class="abbCard-foot">A foot</div>
   </div>
 
   <!-- card 2 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-body-front">
-
-    <div class="abbCard-core">
-      <div class="abbCard-core-displayBox">Display box </div>
-      <div class="abbCard-core-details">Details
-      </div>
-    </div>
-
-    </div>
+    <div class="abbCard-head">A head</div>
     <div class="abbCard-foot">A foot</div>
   </div>
 
   <!-- card 3 -->
   <div class="abbCard-wrapper">
-    <div class="abbCard-body-front">
-
-    <div class="abbCard-core">
-      <div class="abbCard-core-displayBox">Display box </div>
-      <div class="abbCard-core-controls">Controls</div>
-    </div>
-
-    </div>
+    <p>Hello</p><br>
+    <p>Hello</p><br>
+    <p>Hello</p><br>
   </div>
 
 </div>
