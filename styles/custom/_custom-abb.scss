@@ -94,7 +94,23 @@ figure img {
   text-transform: uppercase;
 }
 
-/*-- Txt --*/
+/*-- Documentation styling --*/
+
+.cardDescriptions {
+  background-color: rgba(0,0,0,0.05);
+  @include flexbox;
+
+  div {
+    @include flex(1);
+  }
+
+  h4 {
+    margin: 0.5em;
+    padding: 0;
+  }
+}
+
+/*-- Typography --*/
 h4,h5 {
   font-weight: normal;
 }
@@ -119,6 +135,16 @@ p {
 
 p, li {
   line-height: 1.5em;
+}
+
+header {
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
 /*-- Images --*/
