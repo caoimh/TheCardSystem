@@ -3,11 +3,10 @@
 // Set a min and max width in pixels for cards
 .abbCard-deck {
   @include flex-wrap(wrap);
+  display: flex;
 }
 
 .abbCard-wrapper {
-  //min-width: 320px;
-  //max-width: 33.3333%;
 }
 
 .min-320 .abbCard-wrapper {
@@ -37,8 +36,27 @@
   max-width: 50%;
 }
 
-@media (max-width: 722px) {
-  min-width: 100%;
+
+@media (min-width: 200px) and (max-width: 698px) {
+  .mq .abbCard-wrapper {
+    flex-basis: 90%;
+    max-width: 90%;
+    background-color: #ccc;
+  }
+}
+
+@media (min-width: 699px) and (max-width: 999px) {
+  .mq .abbCard-wrapper {
+    flex-basis: 45%;
+    max-width: 45%;
+    background-color: #999;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mq .abbCard-wrapper {
+    background-color: #000;
+  }
 }
 
 /*

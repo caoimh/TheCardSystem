@@ -1,0 +1,41 @@
+<!-- card 1 -->
+<div class="abbCard-wrapper">
+  <div class="abbCard-head">
+    <div>Title</div>
+  </div>
+
+  <div class="abbCard-body-front">
+
+    <div class="abbCard-core">
+      <div class="abbCard-core-displayBox">
+        <table style="width: 540px;">
+          <tr>
+            <td>A cell</td>
+          </tr>
+        </table>
+      </div>
+      <div class="abbCard-core-details">Front
+      </div>
+    </div><!--END .abbCard-core-->
+
+  </div><!--END .abbCard-body-front-->
+
+  <div class="abbCard-body-back hidden">
+
+  <div class="abbCard-core">
+    <div class="abbCard-core-displayBox">
+      <img src="images/robot-2.png" alt="">
+    </div>
+    <!--<div class="abbCard-core-controls">Controls</div>-->
+    <div class="abbCard-core-details">Back
+    </div>
+  </div><!--END .abbCard-core-->
+
+  </div><!--END .abbCard-body-back-->
+
+  <div class="abbCard-foot">
+    <div>
+      <button class="switcher">Switch</button>
+    </div>
+  </div><!--END .abbCard-foot-->
+</div><!--END .bbCard-wrapper-->

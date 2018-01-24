@@ -1,1 +1,2 @@
-<script src="js/tabby.js"></script>
+<script src="libraries/tabby.js"></script>
+<script src="libraries/fitie.js"></script>
