@@ -275,7 +275,13 @@
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 <!-- card 3 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
-
+</div>
+<p>...and another card deck with 2 and MQ:</p>
+<div class="abbCard-deck mq">
+<!-- card 1 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!-- card 2 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 </div>
 <p>The cards resize based on the width of the card deck containing them. If we do not wish for the cards to shrink down as they do by default we can set a minium width on each card and when they reach this with we can tell the card deck to make them stack vertically instead of horizontally:</p>
 <p>In the following example the card deck has class '.min-320' added to it. This tells it to set a minimum with of 320 pixels on the cards within before they begin to wrap.</p>

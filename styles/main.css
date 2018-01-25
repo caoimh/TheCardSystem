@@ -1264,11 +1264,11 @@ Basic HTML elements
 
 .abbCard-core .abbCard-core-displayBox {
   background-color: #fafafa;
-  border-bottom: solid 1px #f0f0f0;
-  /*
-  max-height: 20em;
-  overflow: hidden;
-  */ }
+  border-bottom: solid 1px #f0f0f0; }
+
+.abbCard-core-displayBox img,
+.abbCard-core-displayBox video {
+  object-fit: cover; }
 
 .abbCard-core .abbCard-core-controls {
   background-color: #fafafa;
