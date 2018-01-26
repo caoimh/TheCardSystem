@@ -1,0 +1,70 @@
+<!--#include virtual="includes/htmlstart.shtml" -->
+<!--#include virtual="includes/headstart.shtml" -->
+<!--#include virtual="includes/meta.shtml" -->
+<!--#include virtual="includes/title.shtml" -->
+<link rel="stylesheet" href="styles/main.css">
+
+<script src="libraries/prism.js"></script>
+<link rel="stylesheet" href="libraries/prism.css">
+
+<script src="libraries/flickity.js"></script>
+
+<!--#include virtual="includes/headscripts.shtml" -->
+
+<link rel="stylesheet" href="libraries/flickity.css">
+<style media="screen">
+.carousel {
+  max-width: 100%; /* fixed gallery width */
+}
+
+.carousel-cell {
+  width: 100%;
+  /*height: 200px;*/
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+}
+
+</style>
+<!--#include virtual="includes/headstop.shtml" -->
+<!--#include virtual="includes/bodystart.shtml" -->
+<!--#include virtual="includes/browsehappy.shtml" -->
+
+<section>
+<div class="abbCard-deck mq">
+<!-- card 1 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!-- card 2 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+</div>
+<div class="abbCard-deck mq">
+<!-- card 1 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!-- card 2 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!-- card 3 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+</div>
+<div class="abbCard-deck mq">
+<!-- card 1 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!-- card 2 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!-- card 3 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!-- card 4 -->
+<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+</div>
+
+
+
+
+
+
+</section>
+
+<!--#include virtual="includes/basescripts.shtml" -->
+<!--#include virtual="includes/bodystop.shtml" -->
+<!--#include virtual="includes/htmlstop.shtml" -->

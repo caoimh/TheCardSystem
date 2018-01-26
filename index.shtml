@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="libraries/prism.css">
 
 <script src="libraries/flickity.js"></script>
+
+<!--#include virtual="includes/headscripts.shtml" -->
+
 <link rel="stylesheet" href="libraries/flickity.css">
 <style media="screen">
 .carousel {
@@ -23,8 +26,8 @@
 .carousel-cell:before {
   display: block;
 }
+
 </style>
-<!--#include virtual="includes/headscripts.shtml" -->
 <!--#include virtual="includes/headstop.shtml" -->
 <!--#include virtual="includes/bodystart.shtml" -->
 <!--#include virtual="includes/browsehappy.shtml" -->
@@ -36,7 +39,7 @@
 
 
 
-
+<p>NB! I am using Johnathan Neals <a href="https://github.com/jonathantneal/fitie"> Fixie.js</a> to polyfill explorers lack of support for <a href="https://www.w3.org/TR/css3-images/#the-object-fit"> object-fit</a>.</p>
 <section>
   <h1>ABB Nested Cards</h1>
 <p>Cards are used to display an assembly of related content in self-contained 'packages'.</p>
@@ -244,7 +247,7 @@
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 </div>
 
-<p>...and another card deck with 4 cards:</p>
+<p>The two cards resize down to tiny cards sharing the with evenly between them. However when we try with 4 cards look what happens when we resize:</p>
 <div class="abbCard-deck">
 <!-- card 1 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
@@ -255,8 +258,8 @@
 <!-- card 4 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 </div>
-
-<p>...and another card deck with some MQ:</p>
+<p>The fourth card wraps down to a new row and natuarlly takes up it's share of that row: 100% width / 1 card = full width. This makes for a staggered and untidy layout (unless intended).</p>
+<p>The solution is to add Media Queries to certain breakpoints. The best way to do this is to build the layout with even flex sharing, resize, observe the behaviour then start applying rules into the media queries in the CSS.</p>
 <div class="abbCard-deck mq">
 <!-- card 1 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
@@ -284,8 +287,7 @@
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 </div>
 <p>The cards resize based on the width of the card deck containing them. If we do not wish for the cards to shrink down as they do by default we can set a minium width on each card and when they reach this with we can tell the card deck to make them stack vertically instead of horizontally:</p>
-<p>In the following example the card deck has class '.min-320' added to it. This tells it to set a minimum with of 320 pixels on the cards within before they begin to wrap.</p>
-<div class="abbCard-deck min-320">
+<div class="abbCard-deck">
 <!-- card 1 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 <!-- card 2 -->
@@ -301,7 +303,7 @@
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 </div>
 <p>The 3rd card which has wrapped, now takes up the full width of the card deck. To overcome this we can tell the cards to stack vertically (not to wrap):</p>
-<div class="abbCard-deck min-320 ">
+<div class="abbCard-deck">
 <!-- card 1 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 <!-- card 2 -->

@@ -3,10 +3,29 @@
   tabby.init();
 </script>
 
-<script>
 
+
+
+
+<script>
+console.log('hello world');
   var cards = document.querySelectorAll('.abbCard-wrapper');
 
+  for(var j = 0; j < cards.length; j++){
+    var front = cards[j].querySelector('.abbCard-body-front');
+    var back = cards[j].querySelector('.abbCard-body-back');
+    var switcher = cards[j].querySelectorAll('.switcher');
+
+    for(var i = 0; i < switcher.length; i++){
+      switcher[i].addEventListener('click', function(){
+        front.classList.toggle('hidden');
+        back.classList.toggle('hidden');
+        console.log(this);
+      });
+    };
+  };
+
+/*
   cards.forEach(function(card, index){
     var front = card.querySelector('.abbCard-body-front');
     var back = card.querySelector('.abbCard-body-back');
@@ -21,14 +40,14 @@
 
   });
 
-
+*/
   //console.log();
 </script>
 
 
 
 <script>
-
+/*
 
 var timeout;
 var d_width;
@@ -42,30 +61,22 @@ var cardWidth;
 
   deckWidth = document.createElement('div');
   showWidth.appendChild(deckWidth);
-  console.log(showWidth);
+  //console.log(showWidth);
 
 
 
 window.addEventListener('resize', function(event){
-  console.log('no debounce');
-
+  //console.log('no debounce');
   if(!timeout){
     timeout = setTimeout(function(){
-
         timeout = null;
         console.log('debounced');
-
         d_width = d.offsetWidth;
-
         deckWidth.innerHTML = "Carddeck width = " + d_width;
-
     }, 66);
-
-
-    console.log(d_width);
   }
 }, false);
 
 
-
+*/
 </script>

@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+
+<link rel="stylesheet" href="styles/main.css">
+<style>
+section  {
+  max-width: 800px;
+  margin: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.abbCard-wrapper {
+  height: 200px;
+  max-width: calc(33.333333% - 2em);
+}
+
+.imgPlaceholder {
+  width: 300px;
+  height: 140px;
+  background-image: url('images/Hatch-Asphalt-2.png');
+  background-repeat: repeat;
+  padding: 1em;
+  border: solid 1px rgba(0,0,0,0.125);
+}
+
+.maybe {
+  color: #ccc;
+}
+
+tr {
+  border-collapse: collapse;
+  background-color: rgba(255,255,255,0.5);
+  border: solid 1px pink;
+  border-left: solid 1px rgba(255,255,255,0);
+  border-right: solid 1px rgba(255,255,255,0);
+}
+
+td {
+  border: 0;
+  background-color: transparent;
+  padding: 0.5em;
+  border-left: solid 1px red;
+}
+
+td:first-child{
+  border-left: 0;
+}
+
+td:last-child{
+  border-right: 0;
+}
+
+tr:hover {
+  background-color: rgba(0,0,0,0.25);
+  border: solid 1px blue;
+  border-top: solid 1px blue;
+}
+
+tr:hover td {
+  border-bottom: 0px;
+  border-top: solid 1px blue;
+}
+
+.blueLine {
+  border: solid 1px blue;
+}
+
+.blueLine td {
+  border: solid 1px blue;
+  border-collapse: collapse;
+}
+
+.blueLine td:first-child{
+  border-left: solid 1px blue;
+}
+
+.blueLine td:last-child{
+  border-right: solid 1px blue;
+}
+
+/* Just for testing */
+.celltype-button {
+  padding: 0;
+}
+
+.celltype-button div {
+  margin: 0;
+  height: 46px;
+  width: 180px;
+}
+
+.celltype-button div button {
+  margin: 0;
+  background-color: #000;
+  border-radius: 0;
+  border: 0;
+  display: inline;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+.celltype-button div button:hover {
+  background-color: red;
+}
+
+.abbCard-deck {
+  margin-bottom: 1em;
+}
+
+h1 {
+  line-height: 1em;
+}
+
+.rowsHaveBorder tr {
+  border-top: solid 1px #333;
+  border-bottom: solid 1px #333;
+}
+
+.rowsHaveBorder td {
+  border: 0;
+}
+
+.cellsHaveBorder td {
+  border-top: solid 1px #333;
+  border-bottom: solid 1px #333;
+  border-left: 0;
+  border-right: 0;
+}
+
+.tableHaveBorder {
+  border-top: solid 1px #333!important;
+  border-bottom: solid 1px #333;
+}
+
+.tableHaveBorder tr,
+.tableHaveBorder td {
+  border: 0!important;
+}
+
+.rowsHaveBorder,
+.cellsHaveBorder,
+.tableHaveBorder {
+  margin-bottom: 1em;
+}
+
+.topCat a {
+  display: block;
+}
+
+</style>
+
+<script src="js/tabby.js"></script>
+
+</head>
+    <body>
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<section class="">
+
+</section>
+<!--
+<section>
+  <ul>
+    <li>Tables
+      <ul>
+        <li>Intro</li>
+        <li>About this chapter</li>
+        <li>Semantics / Structure</li>
+        <li>Content</li>
+      </ul>
+    </li>
+    <li>Table types
+      <ul>
+        <li>Intro</li>
+        <li>Lists</li>
+        <li>Matrix</li>
+      </ul>
+    </li>
+    <li>Common/General table properties
+      <ul>
+        <li>Themes</li>
+        <li>Line and border styles</li>
+        <li>Text styles</li>
+        <li>Use of color</li>
+      </ul>
+    </li>
+    <li>Table interaction and manipulation
+      <ul>
+        <li>Highlight unsaved changes</li>
+        <li>Edit mode</li>
+        <li>Scroll and pagination</li>
+        <li>Lists with interaction</li>
+        <li>Sorting</li>
+        <li>Column resizing</li>
+        <li>Drilldown / subview</li>
+      </ul>
+    </li>
+    <li>Cells
+      <ul>
+        <li>Cell types</li>
+        <li>Cell design</li>
+        <li>Content alignment</li>
+        <li>Use of color</li>
+      </ul>
+    </li>
+    <li>Cell content types
+      <ul>
+        <li>Cell content</li>
+        <li>How content is affected</li>
+        <li>Content types:
+          <ul>
+            <li>Inline controls</li>
+            <li>Buttons</li>
+            <li>Data/Text inputs</li>
+            <li>Interactive graphs</li>
+            <li>Badges/notifications</li>
+            <li>Icons</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Columns
+      <ul>
+        <li>Margin and padding</li>
+        <li>Line and border styles</li>
+        <li>Column tracking</li>
+        <li>Use of color</li>
+      </ul>
+    </li>
+    <li>Rows
+      <ul>
+        <li>Row types</li>
+        <li>Row styles (zebra)</li>
+        <li>Selecting rows</li>
+        <li>Row tracking</li>
+        <li>Use of color</li>
+      </ul>
+    </li>
+    <li>Headers and footers
+      <ul>
+        <li>Headers</li>
+        <li>Header cell content types and interaction</li>
+        <li>Sub headers</li>
+        <li>Text styles</li>
+        <li>Sorting and filtering</li>
+        <li>Column context menu</li>
+        <li>Footers</li>
+      </ul>
+    </li>
+    <li>Interactive Table examples</li>
+    <li>Responsive tables</li>
+  </ul>
+</section>
+-->
+<section>
+  <h1>Tables</h1>
+  <p class="topCat">Contents:</p>
+  <h3 class="maybex">Intro</h3>
+  <p>Tables are used to organise and arrange data and are important elements in many ABB applications. Complex tables can be challenging to design well and require particular design attention in each individual case.</p>
+  <h3 class="maybe">About this chapter</h3>
+  <p class="maybe">Tables can be simple or complex. Table components (cells, rows) can affect their sibling components. Cells can affect their content and content can affect it's containers.</p>
+
+
+  <h3>Semantics / Strucure</h3>
+  <p>Tables typically contain a <b>header</b> at the top of the table followed by rows containing cells for holding data and interactive elements.</p>
+  <div class="imgPlaceholder">
+    anatomy diagram of a semantic table structure
+  </div>
+</section>
+
+<section>
+  <h1>Table types</h1>
+  <p>Table can be generally divided into two categories: <br>
+    <ul>
+    <li>List style</li>
+    <li>Matrix style</li>
+  </ul>
+</p>
+...existing content here...
+</section>
+
+<section>
+  <h1>Common/General table properties</h1>
+  <h3>Themes</h3>
+  <p>Dark / Light - Tables follow the same standards as all other components regarding <a href="">dark and light themes</a>
+  </p>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+      <tr>
+        <td>Card with light theme examples</td>
+      </tr>
+    </table>
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Card with dark theme examples</td>
+        </tr>
+    </table>
+  </div>
+
+
+  <h3>Line and border styles</h3>
+  <p>Tables, rows and cells can have borders and outlines. It is up to the designer to decide which component takes on the border so long as it looks as it should according to the guidelines. For example, belwo are three tables - one with border applied to the table, one with border applied to the row and one with border applied to the cells.</p>
+  <div class="abbCard-deck">
+
+    <figcaption>Table with border top and bottom:</figcaption>
+    <table class="tableHaveBorder">
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+    </table>
+    <figcaption>Table with rows with border top and bottom:</figcaption>
+    <table class="rowsHaveBorder">
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+    </table>
+    <figcaption>Table with cells with border top and bottom:</figcaption>
+    <table class="cellsHaveBorder">
+      <tr>
+        <td>Table cell</td>
+        <td>Table cell</td>
+      </tr>
+    </table>
+
+  </div>
+  <h4>Line weight</h4>
+  <p>Borders and outlines of tables and their elements (rows, cells) should be 1px or equivalent in thickness (stroke thickness / stroke weight).</p>
+  <h4>Line color</h4>
+  <p>The colors used for outlines and borders have the following specs:</p>
+
+
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+      <tr>
+        <td>Card with subtle lines style examples of a cell and a row</td>
+      </tr>
+    </table>
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Card with defined lines style examples of a cell and a row</td>
+        </tr>
+    </table>
+  </div>
+
+  <h3>Text styles</h3>
+  <p>Here is an overview of the text styles most commonly used in tables:</p>
+  <table>
+    <tr>
+      <td></td>
+      <td>Small</td>
+      <td>Medium</td>
+      <td>Large</td>
+      <td>Use cases:</td>
+    </tr>
+    <tr>
+      <td>Normal/Default:</td>
+      <td>Small</td>
+      <td>Medium</td>
+      <td>Large</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>Uppercase:</td>
+      <td>Small</td>
+      <td>Medium</td>
+      <td>Large</td>
+      <td>...</td>
+    </tr>
+  </table>
+  <h3 class="maybe">Use of color and contrast</h3>
+  <p class="maybe">As mentioned in 'Line and border styles' above, the structural components of a table should be subtle in order for the content to stand out and be highlighted when necessary.</p>
+</section>
+
+
+<section>
+  <h1>Table interaction and manipulation</h1>
+  <p>The following patterns are designed to give the user more control over the table.</p>
+  <div class="abbCard-deck">
+      <table class="abbCard-wrapper">
+        <tr>
+          <td>Column context menu - Some tables may need....(from existing content)</td>
+        </tr>
+      </table>
+      <table class="abbCard-wrapper">
+        <tr>
+          <td>Column resizing</td>
+        </tr>
+      </table>
+      <table class="abbCard-wrapper">
+        <tr>
+          <td>Scroll and pagination</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="abbCard-deck">
+      <table class="abbCard-wrapper">
+          <tr>
+            <td>Lists with interaction</td>
+          </tr>
+        </table>
+        <table class="abbCard-wrapper">
+          <tr>
+            <td>Sorting</td>
+          </tr>
+        </table>
+        <table class="abbCard-wrapper">
+          <tr>
+            <td>Drilldown / subview</td>
+          </tr>
+        </table>
+      </div>
+
+
+</section>
+
+<section>
+  <h1>Cells</h1>
+  <h3>Cell types</h3>
+  <p>Despite how complex and table may seem when it is fully populated with various content types, the variety of cell types is minimal. Cells are simply containers. It is their content that varys.</p>
+
+  <h3>Cell design</h3>
+  <p>Cell design is very simple - usually a border color, a background color and a padding setting. Sometimes a row's background color may change (<a href="">see row & column tracking</a>) giving the effect of the cells background color being changed due to opacity.</p>
+  <p>Cells tend to have simple styling properties so that they can be rendered on the screen, position their contents and set styles on standard/common content such as text or numbers.</p>
+  <h3>Content alignment</h3>
+  <p>Content alignment is a very important property of tables. Correct alignment allows user to scan and compare row and cell content.</p>
+  <p>In general:<br>
+  <ul>
+    <li>Numbers : align right</li>
+    <li>Text : align left</li>
+    <li>Graphs and graphics : align center</li>
+  </ul>
+  <h4>Alignment within cells.....</h4>
+  <table style="border-bottom: solid 1px pink;">
+    <tr>
+      <td style="text-align: left;">LEFT aligned</td>
+      <td style="text-align: center;">CENTER aligned</td>
+      <td style="text-align: right;">RIGHT aligned</td>
+    </tr>
+    <tr>
+      <td style="height: 5em;vertical-align: top;">TOP aligned</td>
+      <td style="height: 5em;vertical-align: middle;">MIDDLE aligned</td>
+      <td style="height: 5em;vertical-align: bottom;">BOTTOM aligned</td>
+    </tr>
+  </table>
+   </p>
+  <h3>Use of color</h3>
+  <p>Columns or cells with different background color can be used to emphasize or differentiate parts of a table to enhance legibility.</p>
+  <div class="imgPlaceholder">
+    Image examples from existing "Use of background color paragraph"
+  </div>
+</section>
+
+
+
+<section>
+  <h1>Cell content types</h1>
+  <h3>Cell content</h3>
+  <p>For the most part, cells are merely structured containers for various content types, with the sole purpose of holding that content in place so that user can easily find it and to verify the users mental model.</p>
+  <p>However, some elements can have slight style adjustments when placed inside a table cell. Buttons, for example, when placed inside a cell, expand to fill all the available space and lose their default border</p>
+  <div class="imgPlaceholder">img of a button and a button in a cell</div>
+
+
+  <h3>How content is affected</h3>
+  <p>Style adjustments are only meant to be surface deep. A dropdown menu placed within a table cell will also lose it's border and strecth to fill the space but when interacted with it's underlying styling will remain the same as if it were not in a cell.</p>
+  <div class="imgPlaceholder">img of a dropdown and a dropdown in a cell</div>
+  <h3>Cell content interaction and manipulation</h3>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Highlight unsaved changes</td>
+        </tr>
+      </table>
+      <table class="abbCard-wrapper">
+        <tr>
+          <td>Edit mode</td>
+        </tr>
+      </table>
+  </div>
+<h4>Tooltips</h4>
+<p>Use tooltips to provide detailed explainations of table headers, cell content or if the content need to be truncated. See the <a href="">Tooltip section of guide here</a>.</p>
+<div class="abbCard-deck">
+  <table class="abbCard-wrapper">
+      <tr>
+        <td>Tooltip example</td>
+      </tr>
+    </table>
+</div>
+  <h3>Content types - specifications</h3>
+  <p>The following is an overview of common content types and their specifications:</p>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Inline controls</td>
+        </tr>
+      </table>
+      <table class="abbCard-wrapper">
+        <tr>
+          <td>Buttons</td>
+        </tr>
+      </table>
+      <table class="abbCard-wrapper">
+        <tr>
+          <td>Data/Text inputs</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="abbCard-deck">
+      <table class="abbCard-wrapper">
+          <tr>
+            <td>Interactive graphs</td>
+          </tr>
+        </table>
+        <table class="abbCard-wrapper">
+          <tr>
+            <td>Badges/notifications</td>
+          </tr>
+        </table>
+        <table class="abbCard-wrapper">
+          <tr>
+            <td>Icons</td>
+          </tr>
+        </table>
+      </div>
+</section>
+
+<section>
+  <h1>Columns</h1>
+  <h3>Column tracking</h3>
+  <p>Table columns (vertical collection of cells across multiple rows) can be colored or highlighted in order to make them stand out and be easily scanned. This can be by default or as a result of interacting with a cell which causes it's coumn to change visual properties in some way.</p>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Example of column tracking</td>
+        </tr>
+      </table>
+  </div>
+  <h3>Column context menu</h3>
+  <p>Some tables may need.....existing content</p>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+      <tr>
+        <td>Example of column context menu</td>
+      </tr>
+    </table>
+</section>
+
+
+<section>
+  <h1>Rows</h1>
+  <p>Rows horizontally align cells. They usually have a minimal amount of styling applied (cells styling make up for most of the tables look and feel). Borders between rows can be a property of the row or of the cells. the outcome should be the same. Rows can also have states and be interactive.</p>
+  <h3>Row styles - line types</h3>
+
+  <p>There are two main line styles for rows:</p>
+  <ul>
+    <li>Normal (subtle lines)</li>
+    <li>Normal (defined lines)</li>
+  </ul>
+  <p>Use whichever style works best with your interface's background color.</p>
+  <h3>Row styles - zebra stripes</h3>
+  <p>Zebra styling is simply applying a background color to alternating rows in order to assist eye tracking.</p>
+  <div class="imgPlaceholder">
+    img of zebra stripes
+  </div>
+  <h3>Hovering over rows</h3>
+  <p>When hovering over rows with a cursor, the row takes on a border (<a href="">see interactive examples below</a>)</p>
+  <h3>Selecting rows</h3>
+  <p>When selecting a row or rows (typically by checking a checkbox), the row takes on a border and a background color (<a href="">see interactive examples below</a>)</p>
+
+  <h3>Row tracking</h3>
+  <p>Table rows (horizontal collection of cells) can be colored or highlighted in order to make them stand out and be easily scanned. This can be by default or as a result of interacting with a cell which causes it's coumn to change visual properties in some way.</p>
+
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Example of column tracking</td>
+        </tr>
+      </table>
+  </div>
+  <h3 class="maybe">Use of color</h3>
+</section>
+
+
+<section>
+  <h1>Headers and footers</h1>
+  <h3>Headers</h3>
+  <p>Existing header intro...</p>
+  <h3>Header cell content types and interaction</h3>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Header type 1 - dropdown</td>
+        </tr>
+      </table>
+      <table class="abbCard-wrapper">
+          <tr>
+            <td>Header type 2 - Text</td>
+          </tr>
+        </table>
+        <table class="abbCard-wrapper">
+            <tr>
+              <td>Header type 3 - color background</td>
+            </tr>
+          </table>
+  </div>
+  <h3>Sub headers</h3>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+        <tr>
+          <td>Table example with sub headers</td>
+        </tr>
+      </table>
+  </div>
+  <h3>Text styles</h3>
+  <p>Insert same text styles table as in 'tables'</p>
+  <h3>Sorting and filtering</h3>
+  <div class="abbCard-deck">
+    <table class="abbCard-wrapper">
+      <tr>
+        <td>Example with sorting</td>
+      </tr>
+    </table>
+    <table class="abbCard-wrapper">
+      <tr>
+        <td>Example with filtering</td>
+      </tr>
+    </table>
+  </div>
+  <h3 class="maybe">Footers</h3>
+</section>
+
+<section>
+  <h1>Interactive Table examples</h1>
+  <p>existing</p>
+</section>
+
+<section>
+  <h1>Responsive tables</h1>
+  <p>existing</p>
+</section>
+
+
+<section style="display: none">
+  <table class="table-test" style="outline: solid 4px #0066cc;border: dotted 4px orange;">
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+
+      <tr style="outline: solid 4px #0066cc;border: dotted 4px orange;">
+        <td>5</td>
+        <td style="outline: solid 4px #000;border: dotted 4px #ccc;">6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+
+    <tr>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+    </tr>
+
+    <tr>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+    </tr>
+  </table>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="display: none">
+
+  <!--
+<p>In this example the javascript adds toggles a class on the row when you click on it. This event should be handled by a checkbox or similar and not the row itself as you can see what happen when you click on the button - the row even fires too!</p>
+<table class="table-test">
+    <tr>
+      <td class="celltype-button">
+        <div>
+          <button>Hello I am a button</button>
+        </div>
+      </td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+
+  <tr>
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+  </tr>
+
+  <tr>
+    <td>13</td>
+    <td>14</td>
+    <td>15</td>
+    <td>16</td>
+  </tr>
+</table>
+-->
+
+
+<br>
+<br>
+<br>
+<br>
+<h2>Cell properties</h2>
+<p>These properties can be set for table cells affecting the cell itself or it's content.</p>
+<table class="table-test">
+
+    <tr>
+      <td>Border</td>
+      <td>Left & Right</td>
+      <td colspan="2">None</td>
+    </tr>
+
+    <tr>
+      <td>Border color</td>
+      <td colspan="3">VALUE</td>
+    </tr>
+
+    <tr>
+      <td>Background</td>
+      <td>Color</td>
+      <td colspan="2">None</td>
+    </tr>
+    <tr>
+      <td>Padding</td>
+      <td>Small</td>
+      <td>Medium</td>
+      <td>Large</td>
+    </tr>
+    <tr>
+      <td>Horizontal content alignment</td>
+      <td>Left</td>
+      <td>Center</td>
+      <td>Right</td>
+    </tr>
+    <tr>
+      <td>Vertical content alignment</td>
+      <td>Top</td>
+      <td>Middle</td>
+      <td>Bottom</td>
+    </tr>
+    <tr>
+      <td>Line height</td>
+      <td colspan="3">VALUE</td>
+    </tr>
+
+
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<h2>Cell content types</h2>
+<p>Some content needs to change from it's usual look in order to look well in a table cell.</p>
+<table class="table-test">
+  <tr>
+    <td><button>A button</button></td>
+    <td>Buttons - buttons usually lose their borders, rounded corners and expand to fill the whole cell...</td>
+  </tr>
+  <tr>
+    <td>TEXT</td>
+    <td>Text labels and data</td>
+  </tr>
+  <tr>
+    <td><input type="text"></input></td>
+    <td>Inputs</td>
+  </tr>
+  <tr>
+    <td>____/\___</td>
+    <td>Graphs</td>
+  </tr>
+  <tr>
+    <td>@</td>
+    <td>icons</td>
+  </tr>
+  <tr>
+    <td>o</td>
+    <td>Badges</td>
+  </tr>
+</table>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h2>Cell content specs</h2>
+<div class="abbCard-deck">
+  <div class="abbCard-wrapper">
+    Button in cell
+  </div>
+  <div class="abbCard-wrapper">
+    Text in cell
+  </div>
+  <div class="abbCard-wrapper">
+    Input in cell
+  </div>
+</div>
+
+<div class="abbCard-deck">
+  <div class="abbCard-wrapper">
+    I am a card
+  </div>
+  <div class="abbCard-wrapper">
+    I am a card
+  </div>
+  <div class="abbCard-wrapper">
+    I am a card
+  </div>
+</div>
+
+<div class="abbCard-deck">
+  <div class="abbCard-wrapper">
+    I am a card
+  </div>
+  <div class="abbCard-wrapper">
+    I am a card
+  </div>
+  <div class="abbCard-wrapper">
+    I am a card
+  </div>
+</div>
+
+</section>
+
+
+<script>
+var menu   = [];
+var hones  = document.querySelectorAll('h1');
+var list   = document.createElement('ul');
+var topCat = document.querySelector('.topCat');
+
+topCat.appendChild(list, topCat);
+
+for (var i = 1; i < hones.length; i++){
+  var htitle = hones[i].innerHTML;
+  menu.push(htitle);
+}
+
+for (var j = 0; j < menu.length; j++){
+  var item = document.createElement('li');
+  var link = document.createElement('a');
+
+  item.append(link);
+  link.append(menu[j]);
+  topCat.append(link);
+}
+
+
+</script>
+
+
+
+
+
+
+<!-- Tabs -->
+<script>
+  tabby.init();
+</script>
+
+
+
+<!--Chris Fernadinis helper scripts-->
+<script>
+
+var hasClass = function (elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+var addClass = function (elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+}
+var removeClass = function (elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+var getClosest = function (elem, selector) {
+  // Element.matches() polyfill
+  if (!Element.prototype.matches) {
+      Element.prototype.matches =
+          Element.prototype.matchesSelector ||
+          Element.prototype.mozMatchesSelector ||
+          Element.prototype.msMatchesSelector ||
+          Element.prototype.oMatchesSelector ||
+          Element.prototype.webkitMatchesSelector ||
+          function(s) {
+              var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                  i = matches.length;
+              while (--i >= 0 && matches.item(i) !== this) {}
+              return i > -1;
+          };
+  }
+    // Get the closest matching element
+    for ( ; elem && elem !== document; elem = elem.parentNode) {
+        if ( elem.matches( selector ) ) return elem;
+    }
+    return null;
+};
+
+
+/*
+  var cards = document.querySelectorAll('.abbCard-wrapper');
+  cards.forEach(function(card, index){
+    var front = card.querySelector('.abbCard-body-front');
+    var back = card.querySelector('.abbCard-body-back');
+    var switcher = card.querySelectorAll('.switcher');
+
+    for(var i = 0; i < switcher.length; i++){
+      switcher[i].addEventListener('click', function(){
+        front.classList.toggle('hidden');
+        back.classList.toggle('hidden');
+      });
+    };
+
+  });
+*/
+
+  // Explorer friendly version of switcher
+  // Use this if you want to find an interactive element
+  // that affects another element in the same card.
+
+  var cards = document.querySelectorAll('.abbCard-wrapper');
+  for (j = 0; j < cards.length; j++){
+    var switchers = cards[j].querySelectorAll('.switcher');
+    for(var i = 0; i < switchers.length;  i++){
+      var s = switchers[i];
+      s.addEventListener('click', function(event){
+        if ( event.target.classList.contains('switcher') ) {
+          var parent = getClosest(event.target, '.abbCard-wrapper');
+          var parentFront = parent.querySelector('.abbCard-body-front');
+          var parentBack = parent.querySelector('.abbCard-body-back');
+          if( hasClass(parentFront, 'hidden')){
+            removeClass(parentFront, 'hidden')
+          }
+          else {
+            addClass(parentFront, 'hidden');
+          }
+          if( hasClass(parentBack, 'hidden')){
+            removeClass(parentBack, 'hidden')
+          }
+          else {
+            addClass(parentBack, 'hidden');
+          }
+      }
+      }, false);
+    }
+  };
+
+  //console.log();
+</script>
+
+
+
+<script>
+/*
+
+var timeout;
+var d_width;
+
+var d = document.querySelector('.abbCard-deck');
+var showWidth = document.querySelector('.showWidth');
+var deckWidth;
+var cardWidth;
+
+
+
+  deckWidth = document.createElement('div');
+  showWidth.appendChild(deckWidth);
+  console.log(showWidth);
+
+
+
+window.addEventListener('resize', function(event){
+  console.log('no debounce');
+
+  if(!timeout){
+    timeout = setTimeout(function(){
+
+        timeout = null;
+        console.log('debounced');
+
+        d_width = d.offsetWidth;
+
+        deckWidth.innerHTML = "Carddeck width = " + d_width;
+
+    }, 66);
+
+
+    console.log(d_width);
+  }
+}, false);
+
+*/
+
+</script>
+
+
+<script>
+
+
+    var tables = document.querySelectorAll('.table-test');
+    for(var i = 0; i < tables.length; i++){
+
+      var rows = tables[i].querySelectorAll('tr');
+      for(var r in rows){
+        if(rows.hasOwnProperty(r)){
+          var rw = rows[r];
+          rw.addEventListener('click', function(){
+            if( hasClass(this, 'blueLine')){
+              removeClass(this, 'blueLine')
+            }
+            else {
+              addClass(this, 'blueLine');
+            }
+          });
+        }
+      }
+    }
+
+</script>
+
+    </body>
+</html>

@@ -1,16 +1,7 @@
-// Media queries for the cards
 
-// Set a min and max width in pixels for cards
 .abbCard-deck {
   @include flex-wrap(wrap);
   display: flex;
-}
-
-.abbCard-wrapper {
-}
-
-.min-320 .abbCard-wrapper {
-  min-width: 320px;
 }
 
 .stack {
@@ -21,25 +12,11 @@
   @include flex-wrap(nowrap);
 }
 
-.min-max-280-540 .abbCard-wrapper {
-  min-width: 480px;
-  max-width: 540px;
-}
-
-.abbCard-deck.min-max-280-100pc .abbCard-wrapper {
-  min-width: 280px;
-  max-width: 100%;
-}
-
-.abbCard-deck.min-max-320-50pc .abbCard-wrapper {
-  min-width: 320px;
-  max-width: 50%;
-}
 
 
 @media (min-width: 200px) and (max-width: 698px) {
   .mq .abbCard-wrapper {
-    flex-basis: 90%;
+    @include flex-basis(90%);
     max-width: 90%;
     background-color: #ccc;
   }
@@ -47,7 +24,7 @@
 
 @media (min-width: 699px) and (max-width: 999px) {
   .mq .abbCard-wrapper {
-    flex-basis: 45%;
+    @include flex-basis(45%);
     max-width: 45%;
     background-color: #999;
   }
@@ -58,6 +35,8 @@
     background-color: #000;
   }
 }
+
+
 
 /*
 .abbCard-wrapper {

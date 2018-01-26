@@ -15,6 +15,7 @@
   @include flexbox;
   @include flex(1);
   @include flex-direction(column);
+  height: 100%;
 }
 
 .abbCard-head,.abbCard-foot  {
@@ -39,7 +40,16 @@
 .abbCard-body-front,
 .abbCard-body-back {
   @include flexbox;
-  height: 100%;
+  /*MAJOR ISSUE TO BE RESOLVED*/
+  /*The height 100% is needed - check section*/
+  /*on omitting parts.*/
+  /*but it messes up in explorer*/
+  padding: 0;
+  margin: 0;
+  
+  background-color: rgba(255,0,0,0.25);
+  border: solid 1px #333;
+  //@include flex-grow(1);
 }
 
 .abbCard-core {
@@ -47,6 +57,7 @@
   @include flex-direction(column);
   @include align-items(stretch);
   @include flex(1);
+  //border: solid 2px blue;
 }
 
 .abbCard-core .abbCard-core-displayBox {

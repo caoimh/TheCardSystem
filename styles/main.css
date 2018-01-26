@@ -581,11 +581,25 @@ sup {
   font-family: 'Inconsolata-Regular';
   font-style: normal;
   src: url("../fonts/Inconsolata/Inconsolata-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'ABBvoice_W_Rg';
+  font-style: normal;
+  src: url("../fonts/ABBvoice/ABBvoice_W_Rg.eot") format("eot"), url("../fonts/ABBvoice/ABBvoice_W_Rg.ttf") format("truetype"), url("../fonts/ABBvoice/ABBvoice_W_Rg.woff") format("woff"), url("../fonts/ABBvoice/ABBvoice_W_Rg.woff2") format("woff2"); }
+@font-face {
+  font-family: 'ABBvoice_W_Bd';
+  font-style: normal;
+  src: url("../fonts/ABBvoice/ABBvoice_W_Bd.eot") format("eot"), url("../fonts/ABBvoice/ABBvoice_W_Bd.ttf") format("truetype"), url("../fonts/ABBvoice/ABBvoice_W_Bd.woff") format("woff"), url("../fonts/ABBvoice/ABBvoice_W_Bd.woff2") format("woff2"); }
+@font-face {
+  font-family: 'ABBvoice_W_Lt';
+  font-style: normal;
+  src: url("../fonts/ABBvoice/ABBvoice_W_Lt.eot") format("eot"), url("../fonts/ABBvoice/ABBvoice_W_Lt.ttf") format("truetype"), url("../fonts/ABBvoice/ABBvoice_W_Lt.woff") format("woff"), url("../fonts/ABBvoice/ABBvoice_W_Lt.woff2") format("woff2"); }
+@font-face {
+  font-family: 'ABBvoice_W_Md';
+  font-style: normal;
+  src: url("../fonts/ABBvoice/ABBvoice_W_Md.eot") format("eot"), url("../fonts/ABBvoice/ABBvoice_W_Md.ttf") format("truetype"), url("../fonts/ABBvoice/ABBvoice_W_Md.woff") format("woff"), url("../fonts/ABBvoice/ABBvoice_W_Md.woff2") format("woff2"); }
 /*-- Headers -----------------------*/
-* {
-  font-family: Helvetica,Arial sans-serif; }
-
 h1, h2, h3, h4, h5 {
+  font-family: 'ABBvoice_W_Bd';
   vertical-align: baseline;
   margin-bottom: 1rem; }
 
@@ -611,7 +625,14 @@ h5 {
   margin-bottom: 0px;
   line-height: 2.0em; }
 
-p {
+p, a {
+  font-family: 'ABBvoice_W_Md';
+  margin: 0px 0px 2em 0px;
+  max-width: 40em;
+  line-height: 1em; }
+
+li {
+  font-family: 'ABBvoice_W_Rg';
   margin: 0px 0px 2em 0px;
   max-width: 40em;
   line-height: 1em; }
@@ -1128,7 +1149,8 @@ Basic HTML elements
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100%; }
 
 .abbCard-head, .abbCard-foot {
   display: -webkit-box;
@@ -1178,7 +1200,14 @@ Basic HTML elements
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100%; }
+  /*MAJOR ISSUE TO BE RESOLVED*/
+  /*The height 100% is needed - check section*/
+  /*on omitting parts.*/
+  /*but it messes up in explorer*/
+  padding: 0;
+  margin: 0;
+  background-color: rgba(255, 0, 0, 0.25);
+  border: solid 1px #333; }
 
 .abbCard-core {
   display: -webkit-box;
@@ -1259,8 +1288,7 @@ Basic HTML elements
 
 .abbCard-body-front,
 .abbCard-body-back {
-  height: 100%;
-  background-color: #fff; }
+  background-color: #0066cc; }
 
 .abbCard-core .abbCard-core-displayBox {
   background-color: #fafafa;
@@ -1359,9 +1387,6 @@ Basic HTML elements
   flex-wrap: wrap;
   display: flex; }
 
-.min-320 .abbCard-wrapper {
-  min-width: 320px; }
-
 .stack {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -1376,25 +1401,19 @@ Basic HTML elements
   -ms-flex-wrap: none;
   flex-wrap: nowrap; }
 
-.min-max-280-540 .abbCard-wrapper {
-  min-width: 480px;
-  max-width: 540px; }
-
-.abbCard-deck.min-max-280-100pc .abbCard-wrapper {
-  min-width: 280px;
-  max-width: 100%; }
-
-.abbCard-deck.min-max-320-50pc .abbCard-wrapper {
-  min-width: 320px;
-  max-width: 50%; }
-
 @media (min-width: 200px) and (max-width: 698px) {
   .mq .abbCard-wrapper {
+    -webkit-flex-basis: 90%;
+    -moz-flex-basis: 90%;
+    -ms-flex-preferred-size: 90%;
     flex-basis: 90%;
     max-width: 90%;
     background-color: #ccc; } }
 @media (min-width: 699px) and (max-width: 999px) {
   .mq .abbCard-wrapper {
+    -webkit-flex-basis: 45%;
+    -moz-flex-basis: 45%;
+    -ms-flex-preferred-size: 45%;
     flex-basis: 45%;
     max-width: 45%;
     background-color: #999; } }

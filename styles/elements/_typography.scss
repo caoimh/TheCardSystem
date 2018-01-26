@@ -10,68 +10,115 @@
   src: url('../fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'ABBvoice_W_Rg';
+  font-style: normal;
+  src:
+  url('../fonts/ABBvoice/ABBvoice_W_Rg.eot') format('eot'),
+  url('../fonts/ABBvoice/ABBvoice_W_Rg.ttf') format('truetype'),
+  url('../fonts/ABBvoice/ABBvoice_W_Rg.woff') format('woff'),
+  url('../fonts/ABBvoice/ABBvoice_W_Rg.woff2') format('woff2')
+  ;
+}
 
+@font-face {
+  font-family: 'ABBvoice_W_Bd';
+  font-style: normal;
+  src:
+  url('../fonts/ABBvoice/ABBvoice_W_Bd.eot') format('eot'),
+  url('../fonts/ABBvoice/ABBvoice_W_Bd.ttf') format('truetype'),
+  url('../fonts/ABBvoice/ABBvoice_W_Bd.woff') format('woff'),
+  url('../fonts/ABBvoice/ABBvoice_W_Bd.woff2') format('woff2')
+  ;
+}
+
+@font-face {
+  font-family: 'ABBvoice_W_Lt';
+  font-style: normal;
+  src:
+  url('../fonts/ABBvoice/ABBvoice_W_Lt.eot') format('eot'),
+  url('../fonts/ABBvoice/ABBvoice_W_Lt.ttf') format('truetype'),
+  url('../fonts/ABBvoice/ABBvoice_W_Lt.woff') format('woff'),
+  url('../fonts/ABBvoice/ABBvoice_W_Lt.woff2') format('woff2')
+  ;
+}
+
+@font-face {
+  font-family: 'ABBvoice_W_Md';
+  font-style: normal;
+  src:
+  url('../fonts/ABBvoice/ABBvoice_W_Md.eot') format('eot'),
+  url('../fonts/ABBvoice/ABBvoice_W_Md.ttf') format('truetype'),
+  url('../fonts/ABBvoice/ABBvoice_W_Md.woff') format('woff'),
+  url('../fonts/ABBvoice/ABBvoice_W_Md.woff2') format('woff2')
+  ;
+}
 
 
 
 /*-- Headers -----------------------*/
 // Use only full and half 'ems'
 
-* {
-  font-family: Helvetica,Arial sans-serif;
-}
-
 h1,h2,h3,h4,h5 {
-vertical-align:baseline;
-margin-bottom : 1rem;
+  font-family: 'ABBvoice_W_Bd';
+  vertical-align:baseline;
+  margin-bottom : 1rem;
 }
 
 h1 {
-font-size: 3em;
-line-height: 3em;
+  font-size: 3em;
+  line-height: 3em;
 }
 
 
 h2 {
-font-size: 2.0em;
-line-height: 2em;
+  font-size: 2.0em;
+  line-height: 2em;
 }
 
 
 h3 {
-font-size: 2.0em;
-font-weight: normal;
-line-height: 1em;
+  font-size: 2.0em;
+  font-weight: normal;
+  line-height: 1em;
 }
 
 h4 {
-font-size: 1.0em;
-text-transform:uppercase;
-line-height: 1.5em;
+  font-size: 1.0em;
+  text-transform:uppercase;
+  line-height: 1.5em;
 }
 
 h5 {
-margin-bottom: 0px;
-line-height: 2.0em;
+  margin-bottom: 0px;
+  line-height: 2.0em;
 }
 
 
-p {
-margin: 0px 0px 2em 0px;
-max-width: 40em;
-line-height: 1em;
+p,a {
+  font-family: 'ABBvoice_W_Md';
+  margin: 0px 0px 2em 0px;
+  max-width: 40em;
+  line-height: 1em;
+}
+
+li {
+  font-family: 'ABBvoice_W_Rg';
+  margin: 0px 0px 2em 0px;
+  max-width: 40em;
+  line-height: 1em;
 }
 
 
 header {
-margin-bottom:1em;
-vertical-align : sub;
+  margin-bottom:1em;
+  vertical-align : sub;
 }
 
 header p {
-font-size:1.0em;
-color:#666;
-line-height:1em;
+  font-size:1.0em;
+  color:#666;
+  line-height:1em;
 }
 
 // Affect the p's within a header group
