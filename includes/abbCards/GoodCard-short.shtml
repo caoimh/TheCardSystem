@@ -1,0 +1,26 @@
+<div class="abbCard-wrapper">Card wrapper
+  <div data-card="abbCard-head">Head</div>
+  <div data-card="abbCard-body-front">Body
+
+  <div class="abbCard-core"><span style="color: #02DED5;font-family: Inconsolata-Regular">Core</span>
+    <div data-card="abbCard-core-displayBox">Display box</div>
+    <div data-card="abbCard-core-controls">Controls</div>
+    <div data-card="abbCard-core-details">Details
+    <br><br>
+      <div class="innerDasher">
+
+        <div data-card="abbCard-core"><span style="color: #02DED5;font-family: Inconsolata-Regular">Core</span>
+          <br><br>
+          <div data-card="abbCard-core-displayBox">Display box</div>
+          <div data-card="abbCard-core-controls">Controls</div>
+          <div data-card="abbCard-core-details">Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br>Detauils <br></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+  <div data-card="abbCard-foot">Foot</div>
+</div>

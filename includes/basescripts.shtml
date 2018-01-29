@@ -1,82 +1,84 @@
 
 <script>
-  tabby.init();
+  //tabby.init();
 </script>
 
 
-
-
-
+<!--Chris Fernadinis helper scripts-->
 <script>
-console.log('hello world');
+
+var hasClass = function (elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+var addClass = function (elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+}
+var removeClass = function (elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+var getClosest = function (elem, selector) {
+  // Element.matches() polyfill
+  if (!Element.prototype.matches) {
+      Element.prototype.matches =
+          Element.prototype.matchesSelector ||
+          Element.prototype.mozMatchesSelector ||
+          Element.prototype.msMatchesSelector ||
+          Element.prototype.oMatchesSelector ||
+          Element.prototype.webkitMatchesSelector ||
+          function(s) {
+              var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                  i = matches.length;
+              while (--i >= 0 && matches.item(i) !== this) {}
+              return i > -1;
+          };
+  }
+    // Get the closest matching element
+    for ( ; elem && elem !== document; elem = elem.parentNode) {
+        if ( elem.matches( selector ) ) return elem;
+    }
+    return null;
+};
+
+
+
+  // Explorer friendly version of switcher
+  // Use this if you want to find an interactive element
+  // that affects another element in the same card.
+
   var cards = document.querySelectorAll('.abbCard-wrapper');
-
-  for(var j = 0; j < cards.length; j++){
-    var front = cards[j].querySelector('.abbCard-body-front');
-    var back = cards[j].querySelector('.abbCard-body-back');
-    var switcher = cards[j].querySelectorAll('.switcher');
-
-    for(var i = 0; i < switcher.length; i++){
-      switcher[i].addEventListener('click', function(){
-        front.classList.toggle('hidden');
-        back.classList.toggle('hidden');
-        console.log(this);
-      });
-    };
+  for (j = 0; j < cards.length; j++){
+    var switchers = cards[j].querySelectorAll('.switcher');
+    for(var i = 0; i < switchers.length;  i++){
+      var s = switchers[i];
+      s.addEventListener('click', function(event){
+        if ( event.target.classList.contains('switcher') ) {
+          var parent = getClosest(event.target, '.abbCard-wrapper');
+          var parentFront = parent.querySelector('.abbCard-body-front');
+          var parentBack = parent.querySelector('.abbCard-body-back');
+          if( hasClass(parentFront, 'hidden')){
+            removeClass(parentFront, 'hidden')
+          }
+          else {
+            addClass(parentFront, 'hidden');
+          }
+          if( hasClass(parentBack, 'hidden')){
+            removeClass(parentBack, 'hidden')
+          }
+          else {
+            addClass(parentBack, 'hidden');
+          }
+      }
+      }, false);
+    }
   };
 
-/*
-  cards.forEach(function(card, index){
-    var front = card.querySelector('.abbCard-body-front');
-    var back = card.querySelector('.abbCard-body-back');
-    var switcher = card.querySelectorAll('.switcher');
-
-    for(var i = 0; i < switcher.length; i++){
-      switcher[i].addEventListener('click', function(){
-        front.classList.toggle('hidden');
-        back.classList.toggle('hidden');
-      });
-    };
-
-  });
-
-*/
   //console.log();
-</script>
-
-
-
-<script>
-/*
-
-var timeout;
-var d_width;
-
-var d = document.querySelector('.abbCard-deck');
-var showWidth = document.querySelector('.showWidth');
-var deckWidth;
-var cardWidth;
-
-
-
-  deckWidth = document.createElement('div');
-  showWidth.appendChild(deckWidth);
-  //console.log(showWidth);
-
-
-
-window.addEventListener('resize', function(event){
-  //console.log('no debounce');
-  if(!timeout){
-    timeout = setTimeout(function(){
-        timeout = null;
-        console.log('debounced');
-        d_width = d.offsetWidth;
-        deckWidth.innerHTML = "Carddeck width = " + d_width;
-    }, 66);
-  }
-}, false);
-
-
-*/
 </script>

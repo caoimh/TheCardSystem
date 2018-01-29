@@ -1,0 +1,14 @@
+<div class="abbCard-wrapper">
+  <div class="abbCard-head"><div>Title</div></div>
+  <div class="abbCard-body-front">
+  <div class="abbCard-core">
+    <div class="abbCard-core-displayBox">
+Just some text
+    </div>
+    <div class="abbCard-core-details">Carousel - Flickity
+    </div>
+  </div>
+  </div>
+
+  <div class="abbCard-foot"><span style="visibility: hidden;">*</span></div>
+</div>

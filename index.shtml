@@ -13,6 +13,7 @@
 
 <link rel="stylesheet" href="libraries/flickity.css">
 <style media="screen">
+
 .carousel {
   max-width: 100%; /* fixed gallery width */
 }
@@ -163,7 +164,7 @@
 <p>Let's see how this looks without styling:</p>
 
 <div class="dasher rounded">
-  <div data-card="abbCard-deck" style="width: 50%;margin: auto;background: transparent;">
+  <div data-card="abbCard-deck" style="width: 100%;margin: auto;background: transparent;">
     <div data-card="abbCard-wrapper">Card wrapper
       <div data-card="abbCard-head">Head</div>
       <div data-card="abbCard-body-front">Body
@@ -184,7 +185,65 @@
   And now we take a card 'core' and nest it in the details of our first card. This allows us to share chunks of information between cards without having to create the content more than once.
 </p>
 <div class="dasher rounded">
-  <div data-card="abbCard-deck" style="width: 50%;margin: auto;background: transparent">
+  <div data-card="abbCard-deck" style="width: 100%;margin: auto;background: transparent">
+    <div data-card="abbCard-wrapper">Card wrapper
+      <div data-card="abbCard-head">Head</div>
+      <div data-card="abbCard-body-front">Body
+
+      <div data-card="abbCard-core"><span style="color: #02DED5;font-family: Inconsolata-Regular">Core</span>
+        <div data-card="abbCard-core-displayBox">Display box</div>
+        <div data-card="abbCard-core-controls">Controls</div>
+        <div data-card="abbCard-core-details">Details
+        <br><br>
+          <div class="innerDasher">
+
+            <div data-card="abbCard-core"><span style="color: #02DED5;font-family: Inconsolata-Regular">Core</span>
+              <br><br>
+              <div data-card="abbCard-core-displayBox">Display box</div>
+              <div data-card="abbCard-core-controls">Controls</div>
+              <div data-card="abbCard-core-details">Details</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <div data-card="abbCard-foot">Foot</div>
+    </div>
+
+
+
+    <div data-card="abbCard-wrapper">Card wrapper
+      <div data-card="abbCard-head">Head</div>
+      <div data-card="abbCard-body-front">Body
+
+      <div data-card="abbCard-core"><span style="color: #02DED5;font-family: Inconsolata-Regular">Core</span>
+        <div data-card="abbCard-core-displayBox">Display box</div>
+        <div data-card="abbCard-core-controls">Controls</div>
+        <div data-card="abbCard-core-details">Details
+        <br><br>
+          <div class="innerDasher">
+
+            <div data-card="abbCard-core"><span style="color: #02DED5;font-family: Inconsolata-Regular">Core</span>
+              <br><br>
+              <div data-card="abbCard-core-displayBox">Display box</div>
+              <div data-card="abbCard-core-controls">Controls</div>
+              <div data-card="abbCard-core-details">Details</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      <div data-card="abbCard-foot">Foot</div>
+    </div>
+
+
+
     <div data-card="abbCard-wrapper">Card wrapper
       <div data-card="abbCard-head">Head</div>
       <div data-card="abbCard-body-front">Body
@@ -217,17 +276,6 @@
 
 <br>
 <p>Let's see how our deck of cards is looking. The following deck of cards have a front and a back with a simple toggle button in the foot.</p>
-
-
-<div class="abbCard-deck">
-<!-- card 1 -->
-<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
-<!-- card 2 -->
-<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
-<!-- card 3 -->
-<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
-</div>
-
 
 <p>The following deck of cards have only a front with a iamge carousel in the display box.</p>
 <div class="abbCard-deck">
@@ -341,11 +389,14 @@
 
     <div class="abbCard-core">
       <div class="abbCard-core-controls">Controls</div>
-      <div class="abbCard-core-details">Details <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <div class="abbCard-core-details">
+
+        <div class="abbCard-core">
+          <div class="abbCard-core-controls">Nested Controls</div>
+          <div class="abbCard-core-details">Nested Details <br>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -359,7 +410,7 @@
     <div class="abbCard-body-front">
 
     <div class="abbCard-core">
-      <div class="abbCard-core-displayBox">Display box </div>
+      <div class="abbCard-core-displayBox">y</div>
       <div class="abbCard-core-details">Details
       </div>
     </div>
@@ -388,11 +439,9 @@
   <div>
     <h4>No Core</h4>
   </div>
+
   <div>
-    <h4>No Body</h4>
-  </div>
-  <div>
-    <h4>No head, No Body, No Foot</h4>
+    <h4>No head, No Foot</h4>
   </div>
 </div>
 <div class="abbCard-deck">
@@ -400,21 +449,14 @@
   <!-- card 1 -->
   <div class="abbCard-wrapper">
     <div class="abbCard-head">A head</div>
-    <div class="abbCard-body-front"></div>
+    <div class="abbCard-body-front">I am a body with a head and a foot</div>
     <div class="abbCard-foot">A foot</div>
   </div>
 
   <!-- card 2 -->
-  <div class="abbCard-wrapper">
-    <div class="abbCard-head">A head</div>
-    <div class="abbCard-foot">A foot</div>
-  </div>
 
-  <!-- card 3 -->
   <div class="abbCard-wrapper">
-    <p>Hello</p><br>
-    <p>Hello</p><br>
-    <p>Hello</p><br>
+    <div class="abbCard-body-front">Hello I am just a body</div>
   </div>
 
 </div>

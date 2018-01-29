@@ -41,9 +41,17 @@
 </div>
 <div class="abbCard-deck mq">
 <!-- card 1 -->
+<!--#include virtual="includes/abbCards/abbcard-short.shtml"-->
+<!-- card 2 -->
+<!--#include virtual="includes/abbCards/abbcard-short.shtml"-->
+<!-- card 3 -->
+<!--#include virtual="includes/abbCards/abbcard-short.shtml"-->
+</div>
+<div class="abbCard-deck mq">
+<!-- card 1 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 <!-- card 2 -->
-<!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
+<!--#include virtual="includes/abbCards/abbcard-short.shtml"-->
 <!-- card 3 -->
 <!--#include virtual="includes/abbCards/abbCard-fullPack.shtml"-->
 </div>

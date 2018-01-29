@@ -1,4 +1,10 @@
 
+img, video {
+	object-fit: cover;
+  min-width: 100%;
+}
+
+
 .abbCard-deck {
   @include flex-wrap(wrap);
   display: flex;
