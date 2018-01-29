@@ -10,12 +10,14 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title></title>
-
 <link rel="stylesheet" href="styles/main.css">
 
 <script src="libraries/prism.js"></script>
 <link rel="stylesheet" href="libraries/prism.css">
-
+<script>
+this.fitie=function(t){function e(){c.call(t,g+m,e);var a={boxSizing:"content-box",display:"inline-block",overflow:"hidden"};"backgroundColor backgroundImage borderColor borderStyle borderWidth bottom fontSize lineHeight height left opacity margin position right top visibility width".replace(/\w+/g,function(t){a[t]=l[t]}),d.border=d.margin=d.padding=0,d.display="block",d.height=d.width="auto",d.opacity=1;var h=t.videoWidth||t.width,s=t.videoHeight||t.height,u=h/s,v=document.createElement("object-fit");v.appendChild(t.parentNode.replaceChild(v,t));for(var p in a)v.runtimeStyle[p]=a[p];var b;"fill"===i?f?(d.width=o,d.height=n):(d["-ms-transform-origin"]="0% 0%",d["-ms-transform"]="scale("+o/h+","+n/s+")"):(r>u?"contain"===i:"cover"===i)?(b=n*u,d.width=Math.round(b)+"px",d.height=n+"px",d.marginLeft=Math.round((o-b)/2)+"px"):(b=o/u,d.width=o+"px",d.height=Math.round(b)+"px",d.marginTop=Math.round((n-b)/2)+"px")}var i=t.currentStyle["object-fit"];if(i&&/^(contain|cover|fill)$/.test(i)){var o=t.clientWidth,n=t.clientHeight,r=o/n,a=t.nodeName.toLowerCase(),d=t.runtimeStyle,l=t.currentStyle,h=t.addEventListener||t.attachEvent,c=t.removeEventListener||t.detachEvent,g=t.addEventListener?"":"on",f="img"===a,m=f?"load":"loadedmetadata";h.call(t,g+m,e),t.complete&&e()}},this.fitie.init=function(){if(document.body)for(var t=document.querySelectorAll("img,video"),e=-1;t[++e];)fitie(t[e]);else setTimeout(fitie.init)},/MSIE|Trident/.test(navigator.userAgent)&&this.fitie.init();
+//# sourceMappingURL=fitie.js.map
+</script>
 <script src="libraries/flickity.js"></script>
 <link rel="stylesheet" href="libraries/flickity.css">
 <style media="screen">
@@ -31,6 +33,14 @@
 /* cell number */
 .carousel-cell:before {
   display: block;
+}
+
+img {
+ object-fit: cover;
+}
+
+.blue {
+  border: solid 2px blue;
 }
 </style>
 <script src="libraries/tabby.js"></script>
@@ -243,7 +253,7 @@
       <div class="abbCard-core-displayBox">
         <img src="images/robot-1.png" alt="">
       </div>
-      <div class="abbCard-core-details">Front
+      <div class="abbCard-core-details">Front - 1
       </div>
     </div><!--END .abbCard-core-->
 
@@ -282,7 +292,7 @@
       <div class="abbCard-core-displayBox">
         <img src="images/robot-1.png" alt="">
       </div>
-      <div class="abbCard-core-details">Front
+      <div class="abbCard-core-details">Front - 2
       </div>
     </div><!--END .abbCard-core-->
 
@@ -310,7 +320,7 @@
 
 <!-- card 3 -->
 <!-- card 1 -->
-<div class="abbCard-wrapper">
+<div class="abbCard-wrapper wow">
   <div class="abbCard-head">
     <div>Title</div>
   </div>
@@ -321,7 +331,7 @@
       <div class="abbCard-core-displayBox">
         <img src="images/robot-1.png" alt="">
       </div>
-      <div class="abbCard-core-details">Front
+      <div class="abbCard-core-details">Front - 3
       </div>
     </div><!--END .abbCard-core-->
 
@@ -527,7 +537,7 @@
 
   <div class="abbCard-core">
     <div class="abbCard-core-displayBox">
-      <img src="images/robot-2.png" alt="">
+
     </div>
     <!--<div class="abbCard-core-controls">Controls</div>-->
     <div class="abbCard-core-details">Back
@@ -1790,23 +1800,90 @@
   tabby.init();
 </script>
 
+
 <script>
 
-  var cards = document.querySelectorAll('.abbCard-wrapper');
+var hasClass = function (elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
 
-  cards.forEach(function(card, index){
-    var front = card.querySelector('.abbCard-body-front');
-    var back = card.querySelector('.abbCard-body-back');
-    var switcher = card.querySelectorAll('.switcher');
+var addClass = function (elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+}
 
-    for(var i = 0; i < switcher.length; i++){
-      switcher[i].addEventListener('click', function(){
-        front.classList.toggle('hidden');
-        back.classList.toggle('hidden');
-      });
-    };
+var removeClass = function (elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
 
-  });
+
+var getClosest = function (elem, selector) {
+  // Element.matches() polyfill
+  if (!Element.prototype.matches) {
+      Element.prototype.matches =
+          Element.prototype.matchesSelector ||
+          Element.prototype.mozMatchesSelector ||
+          Element.prototype.msMatchesSelector ||
+          Element.prototype.oMatchesSelector ||
+          Element.prototype.webkitMatchesSelector ||
+          function(s) {
+              var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                  i = matches.length;
+              while (--i >= 0 && matches.item(i) !== this) {}
+              return i > -1;
+          };
+  }
+    // Get the closest matching element
+    for ( ; elem && elem !== document; elem = elem.parentNode) {
+        if ( elem.matches( selector ) ) return elem;
+    }
+    return null;
+
+};
+
+var cards = document.querySelectorAll('.abbCard-wrapper');
+for (j = 0; j < cards.length; j++){
+
+  var switchers = cards[j].querySelectorAll('.switcher');
+
+
+  for(var i = 0; i < switchers.length;  i++){
+    var s = switchers[i];
+
+    s.addEventListener('click', function(event){
+
+      if ( event.target.classList.contains('switcher') ) {
+        var parent = getClosest(event.target, '.abbCard-wrapper');
+        var parentFront = parent.querySelector('.abbCard-body-front');
+        var parentBack = parent.querySelector('.abbCard-body-back');
+
+
+        if( hasClass(parentFront, 'hidden')){
+          removeClass(parentFront, 'hidden')
+        }
+        else {
+          addClass(parentFront, 'hidden');
+        }
+        if( hasClass(parentBack, 'hidden')){
+          removeClass(parentBack, 'hidden')
+        }
+        else {
+          addClass(parentBack, 'hidden');
+        }
+    }
+
+    }, false);
+  }
+};
+
+
 
 
   //console.log();
